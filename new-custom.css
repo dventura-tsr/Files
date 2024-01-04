@@ -6505,12 +6505,12 @@ h1.ui-title {
   margin: 0px !important;
   padding-left: 15px;
   padding-right: 15px;
-  font-size: 12px !important;
+  font-size: 17px !important;
   font-weight: normal;
   text-shadow: none;
 }
 h1.ui-title.header-has-left {
-  padding-left: 100px;
+  padding-left: 0px;
 }
 h1.ui-title.header-has-right {
   padding-right: 100px;
