@@ -7282,3 +7282,8 @@ div.typing {
   display: block; /* Changes the empty content to a block */
   white-space: pre; /* Allows for the line break */
 }
+
+div#input-container:after {
+    content: 'Your new message shows up here';
+    color: red;
+}
