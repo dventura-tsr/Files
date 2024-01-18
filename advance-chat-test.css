@@ -1,0 +1,19 @@
+/*!
+* jQuery Mobile 1.4.0
+* Git HEAD hash: f09aae0e035d6805e461a7be246d04a0dbc98f69 <> Date: Thu Dec 19 2013 17:34:22 UTC
+* http://jquerymobile.com
+*
+* Copyright 2010, 2013 jQuery Foundation, Inc. and other contributors
+* Released under the MIT license.
+* http://jquery.org/license
+*
+*/
+.link-hover {
+    text-decoration-line: none !important;
+}
+.sc-jrcTuL hsCBjP btn btn-sm btn-primary btn-outline rounded-2xl link-hover gap-1 py-1 px-2 font-weight1 flex-nowrap  min-w-[20%] max-w-[90%] {
+    text-decoration-line: none !important;
+}
+.pn-msg__extras flex flex-row flex-wrap gap-2 justify-center mt-1 min-w-[70vw] {
+    text-decoration-line: none !important;
+}
