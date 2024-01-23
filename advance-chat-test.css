@@ -13,9 +13,24 @@
     text-decoration-line: none !important;
 }
 
+.hsCBjP.hsCBjP {
+    height: auto;
+    color: rgb(75, 93, 255);
+    text-decoration-line: none !important;
+}
+
+.root .min-w-\[20\%\] {
+    min-width: 90% !important;
+}
+
+
+
+/*!
+
 .sc-jrcTuL hsCBjP btn btn-sm btn-primary btn-outline rounded-2xl link-hover gap-1 py-1 px-2 font-weight1 flex-nowrap  min-w-[20%] max-w-[90%] {
     text-decoration-line: none !important;
 }
 .pn-msg__extras flex flex-row flex-wrap gap-2 justify-center mt-1 min-w-[70vw] {
     text-decoration-line: none !important;
 }
+*/
