@@ -33,5 +33,5 @@ element.style {
     pointer-events: none !important;
 }
 svg.svg-inline--fa.fa-up-right-from-square {
-    display: none;
+    display: none !important;
 }
