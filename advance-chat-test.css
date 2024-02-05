@@ -41,3 +41,7 @@ element.style {
   background-color: cyan;
   pointer-events: none !important;
 }
+.w-[24px] h-[24px]  text-label-default  rounded-full ease-in-out  duration-300 hover:bg-cyan-600 {
+    display: none !important;
+    pointer-events: none !important;
+}
