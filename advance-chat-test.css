@@ -23,5 +23,8 @@
     min-width: 90% !important;
 }
 
+element.style {
+    display: none;
+}
 
 
