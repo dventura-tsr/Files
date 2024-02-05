@@ -30,7 +30,3 @@ button-name-popout {
   pointer-events: none !important;
 }
 
-w-[24px] h-[24px] {
-    display: none !important;
-    pointer-events: none !important;
-}
