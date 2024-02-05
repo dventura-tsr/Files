@@ -23,15 +23,7 @@
     min-width: 90% !important;
 }
 
-svg.svg-inline--fa.fa-up-right-from-square {
-    display: none !important;
-    pointer-events: none !important;
-}
 
-element.style {
-    display: none !important;
-    pointer-events: none !important;
-}
 
 path  {
     display: none !important;
