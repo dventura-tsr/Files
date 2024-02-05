@@ -23,11 +23,11 @@
     min-width: 90% !important;
 }
 
-
 .svg.svg-inline--fa.fa-up-right-from-square {
     display: none !important;
     pointer-events: none !important;
 }
+
 .element.style {
     display: none !important;
     pointer-events: none !important;
@@ -37,10 +37,12 @@
     display: none !important;
     pointer-events: none !important;
 }
+
 .button-name-popout:hover {
   background-color: cyan;
   pointer-events: none !important;
 }
+
 .w-[24px] h-[24px] {
     display: none !important;
     pointer-events: none !important;
