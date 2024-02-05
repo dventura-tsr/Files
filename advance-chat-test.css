@@ -24,11 +24,11 @@
 }
 
 
-svg.svg-inline--fa.fa-up-right-from-square {
+.svg.svg-inline--fa.fa-up-right-from-square {
     display: none !important;
     pointer-events: none !important;
 }
-element.style {
+.element.style {
     display: none !important;
     pointer-events: none !important;
 }
