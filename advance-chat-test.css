@@ -25,11 +25,6 @@
 
 
 
-path  {
-    display: none !important;
-    pointer-events: none !important;
-}
-
 button-name-popout {
   background-color: cyan;
   pointer-events: none !important;
