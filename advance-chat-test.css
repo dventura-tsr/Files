@@ -38,7 +38,7 @@
     pointer-events: none !important;
 }
 
-.button-name-popout:hover {
+.button-name-popout {
   background-color: cyan;
   pointer-events: none !important;
 }
