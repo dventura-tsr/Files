@@ -1,0 +1,50 @@
+<html>
+ <head>
+   <title>Pet Store</title>
+   <script src="https://cdn.int2.us.five9nonprod.net/static/stable/chat/wrapper/index.js"></script>
+ </head>
+ <body>
+   <h1>Welcome</h1>
+   <button onclick="start({
+     width: 374,
+     height: 504,
+     left: 1000,
+     top: 100
+   })">Click to chat</button>
+   <p>My first paragraph.</p>
+   <p>Welcome to our pet store! We are excited to provide you with all the pet supplies and products that you need.</p>
+
+   <script>
+     function start(param) {
+       F9.Chat.Wrapper.init({
+         cdn: 'int2',
+         useBusinessHours: false,
+         languages: { "enabled": false },
+         l10n: {
+           "en": {
+             "systemMessages": {
+               "transferredToParticipant": "The chat has been transferred to {name}."
+             },
+             "prepopulatedFields": [
+               { "k": "campaign", "v": "Dan_Chat" },
+               { "k": "1", "v": "Test" },
+               { "k": "2", "v": "Test" },
+               { "k": "3", "v": "Test" } // Ensure to complete the object with closing curly brace and proper quotes if needed
+             ]
+           }
+         },
+         messenger: {
+           "integrationId": "6227e8d6b2944300f32d37a9",
+           "soundNotificationEnabled": true,
+           "transcriptPr": true,
+           "clearMessagesTimeout": 3
+         },
+         // Make sure to complete the 'param' object properties as needed for the chat initialization
+         // e.g., width, height, left, top, etc.
+         // ...
+         // You might need to include more properties or correct the incomplete object
+       });
+     }
+   </script>
+ </body>
+</html>
