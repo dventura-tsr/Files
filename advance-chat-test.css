@@ -32,7 +32,7 @@
     font-weight: 400;
     font-size: var(--fontSizeRegular);
     line-height: 1.4;
-    color: #1be1ac;
+    color: #1be1ac !important;
     letter-spacing: -.12px;
     text-rendering: optimizeLegibility;
     -moz-font-smoothing: antialiased;
@@ -40,8 +40,8 @@
 }
 
 .jCVnws.jCVnws:hover, .jCVnws.jCVnws:focus {
-    background-color: rgb(36 189 117);
-    border-color: rgb(54 131 111);
+    background-color: rgb(36 189 117) !important;
+    border-color: rgb(54 131 111) !important;
     color: var(--lm-digital-web-messenger-chat-dark-text);
 }
 
