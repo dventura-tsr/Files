@@ -1,0 +1,54 @@
+/*!
+* jQuery Mobile 1.4.0
+* Git HEAD hash: f09aae0e035d6805e461a7be246d04a0dbc98f69 <> Date: Thu Dec 19 2013 17:34:22 UTC
+* http://jquerymobile.com
+*
+* Copyright 2010, 2013 jQuery Foundation, Inc. and other contributors
+* Released under the MIT license.
+* http://jquery.org/license
+*
+*/
+/*!
+
+
+
+
+.root .pn-msg-input__wrapper.pn-msg-input__wrapper {
+    border-radius: 6px;
+}
+
+.link-hover {
+    text-decoration-line: none !important;
+}
+
+.hsCBjP.hsCBjP {
+    height: auto;
+    color: rgb(75, 93, 255);
+    text-decoration-line: none !important;
+}
+
+.root .min-w-\[20\%\] {
+    min-width: 90% !important;
+}
+
+.chat_container {
+    font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    font-weight: 400;
+    font-size: var(--fontSizeRegular);
+    line-height: 1.4;
+    color: #1be1ac !important;
+    letter-spacing: -.12px;
+    text-rendering: optimizeLegibility;
+    -moz-font-smoothing: antialiased;
+    padding: 12px;
+}
+
+.jCVnws.jCVnws:hover, .jCVnws.jCVnws:focus {
+    background-color: rgb(36 189 117) !important;
+    border-color: rgb(54 131 111) !important;
+    color: var(--lm-digital-web-messenger-chat-dark-text);
+}
+
+
+
+
