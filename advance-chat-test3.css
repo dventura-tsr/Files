@@ -13,18 +13,16 @@
 
 
 
-.root .pn-msg-input__wrapper.pn-msg-input__wrapper {
-    border-radius: 6px;
-}
+.root .pn-msg-input__wrapper.pn-msg-input__wrapper {border-radius: 6px;}
 
 .root .w-\[43\%\] {
     width: 72%;
 }
 .root .h-\[43\%\] {
-    height: 43;
+    height: 43%;
 
 .gYwLAn {
-    background-color: #000000 important!;
+    background-color: #000000 !important;
     width: 60px;
     height: 60px;
 }
