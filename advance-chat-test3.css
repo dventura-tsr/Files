@@ -11,15 +11,13 @@
 /*!
 
 
-
-
 .root .pn-msg-input__wrapper.pn-msg-input__wrapper {border-radius: 6px;}
 
 .root .w-\[43\%\] {
-    width: 72%;
+    width: 72% !important;
 }
 .root .h-\[43\%\] {
-    height: 43%;
+    height: 72% !important;
 
 .gYwLAn {
     background-color: #000000 !important;
