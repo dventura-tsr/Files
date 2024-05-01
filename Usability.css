@@ -7273,12 +7273,9 @@ div.typing {
     font-size: 14px !important;
 }
 
-#hc-mode:before {
+.fa fa-adjust fa-lg {
     content: "Activer";
 }
 
-.fa-font:before {
-    content: "Disable";
-}
 
 
