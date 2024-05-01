@@ -7275,10 +7275,10 @@ div.typing {
 
 
 #toggle-high-contrast #hc-mode:before {
-    content: "Activer";
+    content: "le contraste élevé";
 }
 
 #toggle-high-contrast:before {
-    content: "le contraste élevé";
+    content: "Activer";
 }
 
