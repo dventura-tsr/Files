@@ -7273,17 +7273,12 @@ div.typing {
     font-size: 14px !important;
 }
 
-.fa fa-adjust fa-lg {
-    content: "Activer";
-    textContent: " High Contrast\n          ";	
-}
-
 
 #toggle-high-contrast #hc-mode:before {
     content: "Disable";
 }
 
-#toggle-high-contrast:after {
+#toggle-high-contrast:before {
     content: "Low Contrast";
 }
 
