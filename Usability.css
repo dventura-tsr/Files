@@ -7279,4 +7279,11 @@ div.typing {
 }
 
 
+#toggle-high-contrast #hc-mode:before {
+    content: "Disable";
+}
+
+#toggle-high-contrast:after {
+    content: "Low Contrast";
+}
 
