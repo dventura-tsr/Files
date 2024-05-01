@@ -7275,6 +7275,7 @@ div.typing {
 
 .fa fa-adjust fa-lg {
     content: "Activer";
+    textContent: " High Contrast\n          "	
 }
 
 
