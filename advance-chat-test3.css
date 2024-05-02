@@ -1,11 +1,17 @@
 
 .root .pn-msg-input__wrapper.pn-msg-input__wrapper {border-radius: 6px;}
 
+.chat_container {
+    font-family: Comic Sans MS !important;
+}
+
 .root .w-\[43\%\] {
     width: 90% !important;
 }
+
 .root .h-\[43\%\] {
     height: 90% !important;
+}
 
 .gYwLAn {
     background-color: rgb(0 0 0) !important;
@@ -13,6 +19,3 @@
     height: 60px !important;
 }
 
-.chat_container {
-    font-family: Comic Sans MS;
-}
