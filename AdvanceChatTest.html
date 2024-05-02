@@ -1,51 +1,107 @@
+<!DOCTYPE html>
 <html>
- <head>
-   <title>Pet Store</title>
-   <script src="https://cdn.int2.us.five9nonprod.net/static/stable/chat/wrapper/index.js"></script>
- </head>
- <body>
-   <h1>Welcome</h1>
-   <button onclick="start({
-     width: 374,
-     height: 504,
-     left: 1000,
-     top: 100
-   })">Click to chat</button>
-   <p>My first paragraph.</p>
-   <p>Welcome to our pet store! We are excited to provide you with all the pet supplies and products that you need.</p>
+<head>
+    <script src="https://cdn.prod.us.five9.net/static/stable/chat/wrapper/index.js"></script>
 
-   <script>
-     function start(param) {
-       F9.Chat.Wrapper.init({
-         cdn: 'int2',
-         useBusinessHours: false,
-         languages: { "enabled": false },
-         l10n: {
-           "en": {
-             "systemMessages": {
-               "transferredToParticipant": "The chat has been transferred to {name}."
-             },
-             "prepopulatedFields": [
-               { "k": "campaign", "v": "Dan_Chat" },
-               { "k": "1", "v": "Test" },
-               { "k": "2", "v": "Test" },
-               { "k": "3", "v": "Test" } // Ensure to complete the object with closing curly brace and proper quotes if needed
-             ]
-           }
-         },
-         messenger: {
-           "integrationId": "6227e8d6b2944300f32d37a9",
-           "soundNotificationEnabled": true,
-           "transcriptPr": true,
-           "customCssUrl":"https://dventura-tsr.github.io/Files/advance-chat-test3.css"},
-           "clearMessagesTimeout": 3
-         },
-         // Make sure to complete the 'param' object properties as needed for the chat initialization
-         // e.g., width, height, left, top, etc.
-         // ...
-         // You might need to include more properties or correct the incomplete object
-       });
-     }
-   </script>
- </body>
+  
+</head>
+
+<body>
+
+    <button id="startChatButton">Click to Start Chat</button>
+
+    <script>
+        function startChat() {
+            F9.Chat.Wrapper.init({
+                cdn: 'prod',
+                useBusinessHours: false,
+                languages: {
+                    "enabled": true,
+                    "backgroundColor": "#65758e",
+                    "defaultToBrowserLocale": true,
+                    "allowUnconfiguredLanguages": false,
+                    "languages": [{
+                        "label": "English",
+                        "code": "en",
+                        "typeLang": "preferred",
+                        "default": true
+                    }]
+                },
+                l10n: {
+                    "en": {
+                        "messenger": {
+                            "customText": {}
+                        },
+                        "systemMessages": {
+                            "transferredToParticipant": "The chat has been transferred to {name}.",
+                            "transferredToGroup": "That chat has been transferred to group {group}."
+                        },
+                        "captureFields": [{
+                            "k": "name",
+                            "l": "Name",
+                            "p": "Enter your name..."
+                        }, {
+                            "k": "email",
+                            "l": "Email Address",
+                            "p": "Enter your email..."
+                        }, {
+                            "k": "Question",
+                            "l": "Question",
+                            "p": "What can we help you with today?"
+                        }]
+                    }
+                },
+                prepopulatedFields: [{
+                    "k": "campaign",
+                    "v": "Dan_Chat"
+                }],
+                messenger: {
+                    "integrationId": "6227e8d6b2944300f32d37a9",
+                    "soundNotificationEnabled": true,
+                    "transcriptPrintingEnabled": false,
+
+                    "menuItems": {
+                        "imageUpload": true,
+                        "fileUpload": true,
+                        "shareLocation": true
+                    },
+                    "embedded": false,
+                    "browserStorage": "sessionStorage",
+                    "fixedHeader": false,
+                    "displayStyle": "window",
+                    "customColors": {
+                        "brandColor": "65758e",
+                        "conversationColor": "0099ff",
+                        "actionColor": "0099ff"
+                    },
+                    "clearMessagesTimeout": 3
+                }
+            });
+        }
+
+        document.getElementById("startChatButton").addEventListener("click", startChat);
+    </script>
+
+<script>
+ F9.Chat.Wrapper.init({
+    cdn: 'alpha-us',
+    useBusinessHours: false,
+    languages: {"enabled":false,"backgroundColor":"#ff00e8"},
+    l10n: {"en":{"messenger":{"customText":{}},"systemMessages":{"transferredToParticipant":"The chat has been transferred to {name}.","transferredToGroup":"That chat has been transferred to group {group}."},"captureFields":[{"k":"name","l":"Name","p":"Enter your name..."},{"k":"email","l":"Email Address","p":"Enter your email..."},{"k":"Question","l":"Question","p":"What can we help you with today?"}]}},
+    prepopulatedFields: [{"k":"campaign","v":"Dan_Chat"}],
+    messenger: {"integrationId":"6227e8d6b2944300f32d37a9","soundNotificationEnabled":true,"customCssUrl":"https://dventura-tsr.github.io/Files/advance-chat-test3.css","transcriptPrintingEnabled":false,"menuItems":{"imageUpload":true,"fileUpload":true,"shareLocation":true},"embedded":false,"browserStorage":"sessionStorage","fixedHeader":false,"displayStyle":"button","customColors":{"brandColor":"ff00e8","conversationColor":"ff00d3","actionColor":"ff00a8"}},
+    clearMessagesTimeout: 3
+  });
+  </script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+  
+  </script>
+
+</body>
 </html>
+
+
+
+
