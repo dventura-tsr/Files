@@ -49,6 +49,9 @@
     color: var(--lm-digital-web-messenger-chat-dark-text);
 }
 
+.root {
 
+--lm-digital-web-messenger-chat-default-font-size: 18px;
+}
 
 
