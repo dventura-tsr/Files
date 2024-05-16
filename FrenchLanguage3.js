@@ -87,5 +87,5 @@ chatLangCallback({
         "S_START_NEW_CHAT": "Démarrer une nouvelle discussion",
         "S_START_NEW_EMAIL": "Démarrer un nouvel e-mail"
     },
-    "S_PROVIDER": ""
+
 });
