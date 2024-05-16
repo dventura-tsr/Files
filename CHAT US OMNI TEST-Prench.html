@@ -1,0 +1,78 @@
+<html>
+<head>
+<script src="https://app.five9.com/consoles/SocialWidget/five9-social-widget.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<style>
+.five9-chat-button {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: inline-block;
+    position: relative;
+    height: 38px;
+    border: none;
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+    padding: 10px 12px 0 39px;
+    background: linear-gradient(#c633b6, #2281B8) !important;
+    color: #292f33 !important;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1;
+    cursor: pointer;
+}
+</style>
+
+
+</head>
+
+<body>
+
+SAMPLE TEXT
+
+<script>
+var options = {
+	"rootUrl": "https://app.five9.com/consoles/",
+	"type": "chat",
+	"title": "CS OMNI US",
+	"tenant": "CS OMNI US",
+	"profiles": "Dan_Chat",
+	"showProfiles": true,
+	"autostart": true,
+	"status":"minimized",
+	"theme": "default-theme.css",
+	"surveyOptions": {
+		"showComment": true,
+		"requireComment": false
+	},
+	"fields": {
+		"name": {
+			"value": "",
+			"show": true,
+			"label": "Name"
+		},
+		"email": {
+			"value": "",
+			"show": true,
+			"label": "Email"
+		}
+	},
+	"playSoundOnMessage": true,
+	"allowCustomerToControlSoundPlay": false,
+	"showEmailButton": true,
+	"hideDuringAfterHours": false,
+	"lang": "https://dventura-tsr.github.io/Files/FrenchLanguage2.js",
+	"useBusinessHours": true,
+	"showPrintButton": false,
+	"allowUsabilityMenu": false,
+	"enableCallback": false,
+	"callbackList": "",
+	"allowRequestLiveAgent": false
+};
+Five9SocialWidget.addWidget(options);
+$(".five9-text").text("Contact Us");
+</script>
+
+</body>
+
+
+
+</html>
