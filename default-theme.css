@@ -707,8 +707,8 @@ div.message {
 }
 
 div.message-container-client div.message-container {
-    background-color: #288DC1 !important;
-    color: #fff !important;
+    background-color: #c128be00 !important;
+    color: #14eb27 !important;
     box-shadow: 0 1px 0 #1E6A91 !important;
     text-align: right !important;
 }
