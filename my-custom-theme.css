@@ -7272,3 +7272,10 @@ div.message  {
 div.typing {
     font-size: 14px !important;
 }
+
+div.message-container-client div.message-container {
+    background-color: #288DC1 !important;
+    color: #fff !important;
+    box-shadow: 0 1px 0 #1E6A91 !important;
+    text-align: right !important;
+}
