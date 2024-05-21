@@ -1,12 +1,29 @@
 <html>
 <head>
-<script src="https://cdn.prod.us.five9.net/static/alpha/chat/wrapper/index.js"></script>
-<script src="https://cdn.prod.us.five9.net/static/stable/chat/proactive/index.min.js"></script>
-<link
- rel="stylesheet"
- type="text/css"
- href="https://cdn.prod.us.five9.net/static/stable/chat/proactive/css/proactive.css"
-/>
+  <script src="https://cdn.prod.us.five9.net/static/stable/chat/wrapper/index.js"></script>
+
+  <!-- Proactive chat scriipts -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.prod.us.five9.net/static/stable/chat/proactive/css/proactive.css">
+  <script src="https://cdn.prod.us.five9.net/static/stable/chat/proactive/index.js"></script>
+
+  <!-- Override styles on certain Proactive elements -->
+  <style>
+    .five9-proactive .five9-start-button {
+      background: white;
+      color: #1d2b36 !important;
+    }
+    .five9-proactive.five9-inverse .five9-start-button {
+      background: #1d2b36 !important;
+      color: white;
+    }
+    .five9-proactive {
+      background: linear-gradient(#1d2b36, #0f1b24) !important;
+      color: white;
+    }
+    .five9-proactive .five9-icon {
+      display: none !important;
+    }
+  </style>
 </head>
 
 
@@ -26,24 +43,26 @@ This is a test HTML
     clearMessagesTimeout: 3
   });
 </script>
-<script>	
-const Config = {
- tenant: "CS OMNI US",
- profiles: ["Dan_Chat"],
- restAPI: "https://app.five9.com",
- };
- const options = {
- tenant: Config.tenant,
- restAPI: Config.restAPI,
- notificationType: "notification",
- };
- F9.Chat.Proactive.init(options);
- F9.Chat.Proactive.start({
- pageId: "demoPage",
- profiles: Config.profiles[0],
- fields: ["page1-f1", "page1-f2", "page1-f3"],
- });
-	
-</script>
+<!-- Proactive chat config is the same as our classic: -->
+    <script>
+      const Config = {
+        tenant: 'CS OMNI US',
+        profiles: ['Dan_Chat'],
+        restAPI: 'https://app-scl.five9.com'
+      };
+
+      const options = {
+        tenant: Config.tenant,
+        restAPI: Config.restAPI,
+        notificationType: 'notification'
+      };
+
+      F9.Chat.Proactive.init(options)
+      F9.Chat.Proactive.start({
+        pageId: 'demoPage',
+        profiles: Config.profiles[0],
+        fields: ['page1-f1','page1-f2','page1-f3']
+      });
+    </script>
 </body>
 </html>
