@@ -1,6 +1,12 @@
 <html>
 <head>
-<script src="https://cdn.prod.us.five9.net/static/alpha/chat/wrapper/index.js"></script>
+<!--<script src="https://cdn.prod.us.five9.net/static/alpha/chat/wrapper/index.js"></script>-->
+<script src="https://cdn.prod.us.five9.net/static/stable/chat/proactive/index.min.js"></script>
+<link
+ rel="stylesheet"
+ type="text/css"
+ href="https://cdn.prod.us.five9.net/static/stable/chat/proactive/css/proactive.css"
+/>
 </head>
 
 
@@ -19,10 +25,25 @@ This is a test HTML
     messenger: {"integrationId":"6227e8d6b2944300f32d37a9","soundNotificationEnabled":true,"transcriptPrintingEnabled":true,"menuItems":{"imageUpload":true,"fileUpload":true,"shareLocation":true},"embedded":false,"browserStorage":"sessionStorage","fixedHeader":false,"displayStyle":"button","customColors":{"brandColor":"65758e","conversationColor":"0099ff","actionColor":"0099ff"}},
     clearMessagesTimeout: 3
   });
-	
-
 </script>
-
-
+<script>	
+const Config = {
+ tenant: "CS OMNI US",
+ profiles: ["Dan_Chat"],
+ restAPI: "https://app.five9.com",
+ };
+ const options = {
+ tenant: Config.tenant,
+ restAPI: Config.restAPI,
+ notificationType: "notification",
+ };
+ F9.Chat.Proactive.init(options);
+ F9.Chat.Proactive.start({
+ pageId: "demoPage",
+ profiles: Config.profiles[0],
+ fields: ["page1-f1", "page1-f2", "page1-f3"],
+ });
+	
+</script>
 </body>
 </html>
