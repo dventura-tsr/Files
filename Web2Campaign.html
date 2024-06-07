@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title> Example Web Page</title>
+</head>
+<body>
+<a href="http://users.skynet.be/mgueury/mozilla/">
+  <img src="http://users.skynet.be/mgueury/mozilla/tidy_16.gif" alt="Validated by HTML Validator (based on Tidy) " height="16" width="39"/>
+</a>
+
+		<!-- Set the form action, including an optional message or page for your customer.-->
+<form action="https://api.five9.com/web2campaign/AddToList?method=post" onsubmit="window.location='ThankYou.html';">
+
+		<!-- Add the required hidden fields:
+			- F9domain name
+	 		- F9list Web2Campaign list
+			- number1 (provided by user in the Web form below) -->
+	<input type="hidden" name="F9domain" value="CS OMNI US">
+	<input type="hidden" name="F9list" value="Dan_List">
+	
+		<!-- Add optional hidden fields: 
+			- F9retURL: fully qualified URL to display the result.
+			- F9retResults: set to 1 to append a result code to the result.
+			- F9updateCRM: set to 1 to update all the fields in the list.
+			- F9CallASAP: set to 1 to dial the number as soon as possible.
+			- F9TimeToCAll: set the date and time to call the number.
+			- F9TimeFormat: set the time format if you are using the F9TimeToCall parameter. -->
+	<input type="hidden" name="F9retURL" value="https://202875abd975534f62262c2840a4fa18.m.pipedream.net">
+	<input type="hidden" name="F9retResults" value="1">
+	<input type="hidden" name="F9updateCRM" value="1">
+	<input type="hidden" name="F9CallASAP" value="1">
+	
+		<!-- In the user input fields, the phone number is required. Be sure to match the case of the 
+			 Web2Campaign parameter name to the field name in the Administrator VCC. -->
+
+	<table summary="Text fields that customers see">
+			<tbody>
+			   <tr>
+			      <td>First Name</td>
+	  		      <td><input id="first_name" maxLength="60" name="first_name"></td></tr>
+	  		   <tr>
+				  <td>Last Name</td>
+				  <td><input id="last_name" maxLength="60" name="last_name"></td></tr>
+	  		   <tr>
+				  <td>Company</td>
+				  <td><input id="company" maxLength="60" name="company"></td></tr>	 
+	  		   <tr>
+				  <td>Phone</td>
+				  <td><input id="number1" maxLength="40" name="number1"></td></tr>
+	  		   <tr>
+				  <td>Address</td>
+				  <td><textarea name="street" rows="3" cols="30"></textarea></td></tr>
+	  		   <tr>
+				  <td>City</td>
+				  <td><input id="city" maxLength="20" name="city"></td></tr>
+	  		   <tr>
+				  <td>State/Province</td>
+				  <td><input id="state" maxLength="20" name="state"></td></tr>
+	  		   <tr>
+				  <td>ZIP</td>
+				  <td><input id="zip" maxLength="20" name="zip"></td></tr>
+			</tbody>
+	</table>
+	<input type="submit" name="submit" value="Submit Data">
+</form>
+</body>
+</html>
