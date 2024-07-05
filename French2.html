@@ -1,0 +1,987 @@
+
+<!DOCTYPE html> <!-- sfprod00003O --> <html lang="fr"> <head> <script async src="https://cdn.prod.ca.five9.net/static/stable/chat/wrapper/index.js"></script> <style>
+  .disabled-container {
+      display: none;
+  }
+</style> <script type="text/javascript">
+// Duration in milliseconds to wait while the Kameleoon application file is loaded
+var kameleoonLoadingTimeout = 1000;
+
+window.kameleoonQueue = window.kameleoonQueue || [];
+window.kameleoonStartLoadTime = new Date().getTime();
+if (!document.getElementById("kameleoonLoadingStyleSheet") && !window.kameleoonDisplayPageTimeOut) {
+  var kameleoonS = document.getElementsByTagName("script")[0];
+  var kameleoonCc = "* { visibility: hidden !important; background-image: none !important; }";
+  var kameleoonStn = document.createElement("style");
+  kameleoonStn.type = "text/css";
+  kameleoonStn.id = "kameleoonLoadingStyleSheet";
+  if (kameleoonStn.styleSheet) {
+      kameleoonStn.styleSheet.cssText = kameleoonCc;
+  }
+  else {
+      kameleoonStn.appendChild(document.createTextNode(kameleoonCc));
+  }
+  kameleoonS.parentNode.insertBefore(kameleoonStn, kameleoonS);
+  window.kameleoonDisplayPage = function (fromEngine) {
+      if (!fromEngine) {
+          window.kameleoonTimeout = true;
+      }
+      if (kameleoonStn.parentNode) {
+          kameleoonStn.parentNode.removeChild(kameleoonStn);
+      }
+  };
+  window.kameleoonDisplayPageTimeOut = window.setTimeout(window.kameleoonDisplayPage, kameleoonLoadingTimeout);
+}</script> <script type="text/javascript" src="//yt04jaca8e.kameleoon.eu/kameleoon.js" async="true"></script> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <meta name="viewport" content="width=device-width, initial-scale=1"> <meta charset="utf-8" /> <meta name="msapplication-TileColor" content="#453e5f"> <meta name="theme-color" content="#453e5f"> <link rel="icon" href="/favicon.ico?v=1699651462817" type="image/x-icon" /> <link rel="apple-touch-icon" sizes="180x180" href="/Assets/dist/images/logos/eqb_lozenge180x180.png?v=1699651462817"> <link rel="icon" type="image/png" sizes="32x32" href="/Assets/dist/images/logos/eqb_lozenge32x32.png?v=1699651462817"> <link rel="icon" type="image/png" sizes="16x16" href="/Assets/dist/images/logos/eqb_lozenge16x16.png?v=1699651462817"> <link rel="preload" href="/Assets/dist/css/fonts/slick.woff" as="font" type="font/woff" crossorigin> <link href="/Assets/dist/css/fonts/slick.eot" as="font" type="font/eot" crossorigin> <link rel="preload" href="/Assets/dist/css/fonts/slick.ttf" as="font" type="font/ttf" crossorigin> <link rel="manifest" href="/manifest.json"> <link rel="mask-icon" href="/Assets/dist/images/logos/eqb_lozenge.svg" color="#453e5f"> <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Open+Sans:400,700"> <script src="https://www.google.com/recaptcha/api.js?hl=fr-CA" async defer></script> <title>
+Calculateur des frais de remboursement anticip&#233; d&#39;un pr&#234;t hypoth&#233;caire | Banque Équitable
+</title> <!-- Google Tag Manager --> <script>
+(function (w, d, s, l, i) {
+  w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+  }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-WNHWJHC');</script> <!-- End Google Tag Manager --> <!-- Google Analytics --> <script>
+(function (i, s, o, g, r, a, m) {
+  i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+  }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+ga('create', 'UA-82523008-1', 'auto');
+ga('send', 'pageview');
+</script> <!-- End Google Analytics --> <link rel="alternate" href="https://www.equitablebank.ca/calculator" hreflang="en" /> <link rel="alternate" href="https://www.equitablebank.ca/fr/calculator" hreflang="fr" /> <script src="/Assets/dist/js/app.js?v=1714760916171" type="text/javascript"></script><script src="/Assets/dist/js/ls.bgset.min.js" type="text/javascript"></script><script src="/Assets/dist/js/ls.unveilhooks.min.js" type="text/javascript"></script><script src="/Assets/dist/js/lazysizes.min.js" type="text/javascript"></script><link href="/ResourcePackages/Bootstrap/assets/dist/css/main.min.css?v=1699651462817" rel="stylesheet" type="text/css" /><link href="/Assets/dist/css/vendor.min.css?v=1699651462817" rel="stylesheet" type="text/css" /><link href="/Assets/dist/css/main.min.css?v=1699651462817" rel="stylesheet" type="text/css" /> <meta property="og:title" content="Calculateur des frais de remboursement anticip&#233; d&#39;un pr&#234;t hypoth&#233;caire" /><meta property="og:url" content="https://www.equitablebank.ca/fr/calculator" /><meta property="og:type" content="website" /><meta property="og:site_name" content="Equitable Bank" /><script type="text/javascript" src="https://cdn.prod.ca.five9.net/static/stable/chat/wrapper/index.js"></script><style type="text/css" media="all">.accordion-widget .accordion-toggle{padding-left:0}.disclaimers ol{counter-reset:item;padding:0;list-style:none}.disclaimers li:before{content:counter(item);counter-increment:item;position:absolute;vertical-align:super;font-size:xx-small;left:1em}.disclaimers li{position:relative;display:block;padding:0 0 0 1.5em}</style><meta name="Generator" content="Sitefinity 14.4.8100.0 DX" /><link rel="canonical" href="https://www.equitablebank.ca/fr/calculator" /><link href="/Telerik.Web.UI.WebResource.axd?d=PMrIT5dOWaVYIcpFWUE4nEvV2C7yQS0HOUMU9Ewqj_y_qE6Vuz8O9-lO8m2eZSXuKYjGPoUdFm6y8J5xBK5l9b_Sh57qhrHGFgLXXSrlNfuVHsxBf6eBtDgHZeW8B74A0&amp;t=638537796830334359&amp;compress=0&amp;_TSM_CombinedScripts_=%3b%3bTelerik.Sitefinity.Resources%2c+Version%3d14.4.8100.0%2c+Culture%3dneutral%2c+PublicKeyToken%3db28c218413bdf563%3afr%3aca651bf7-ab52-4d0b-838f-dc7a536af758%3a7a90d6a" type="text/css" rel="stylesheet" /></head> <body class="fr"><form method="post" action="./calculator" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="ctl05_TSM" id="ctl05_TSM" value="" />
+<input type="hidden" name="ctl06_TSSM" id="ctl06_TSSM" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="amvuItrk8oYT2umSzRpmEYu7zm7AMuApdHJNSDXmkl/GZIGPNQPBkyn8pjNRC72Sefie4X32MiU/yTewgrUtJCDWxmUjYChYN3mSJ+g7v/U=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+theForm.__EVENTTARGET.value = eventTarget;
+theForm.__EVENTARGUMENT.value = eventArgument;
+theForm.submit();
+}
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZAqWEjGXPCajcSbX8xNKmGdRq01g2N6ZiSinvj88GqVJVHU86InvSQO9fMfrinH0hQ2&amp;t=638537796831428109" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"fr","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":" ","CurrencySymbol":"€","NaNSymbol":"NaN","CurrencyNegativePattern":8,"NumberNegativePattern":1,"PercentPositivePattern":0,"PercentNegativePattern":0,"NegativeInfinitySymbol":"-∞","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":",","NumberGroupSeparator":" ","CurrencyPositivePattern":3,"PositiveInfinitySymbol":"∞","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":",","PercentGroupSeparator":" ","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"","Calendar":{"MinSupportedDateTime":"\/Date(-62135578800000)\/","MaxSupportedDateTime":"\/Date(253402300799999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":true},"DateSeparator":"/","FirstDayOfWeek":1,"CalendarWeekRule":2,"FullDateTimePattern":"dddd d MMMM yyyy HH:mm:ss","LongDatePattern":"dddd d MMMM yyyy","LongTimePattern":"HH:mm:ss","MonthDayPattern":"d MMMM","PMDesignator":"","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd/MM/yyyy","ShortTimePattern":"HH:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM yyyy","AbbreviatedDayNames":["dim.","lun.","mar.","mer.","jeu.","ven.","sam."],"ShortestDayNames":["di","lu","ma","me","je","ve","sa"],"DayNames":["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"],"AbbreviatedMonthNames":["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc.",""],"MonthNames":["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre",""],"IsReadOnly":true,"NativeCalendarName":"calendrier grégorien","AbbreviatedMonthGenitiveNames":["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc.",""],"MonthGenitiveNames":["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre",""]},"eras":[1,"ap. J.-C.",null,0]};//]]>
+</script>
+
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl05_TSM&amp;compress=0&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3afr%3a9ead301a-2c07-4fc5-be19-f8423a34e117%3aea597d4b%3ab25378d2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=Sm_GGXofLw4C9Eu03fCPHKK96qT44mhovWKeyT8KwURc24z5v0_77HSfmDO5ybZP8v-FyohtgCcl7oPnvI1_eFl3QUs7FVvDCguQJcTvsoJDlqpQJ_CBb_SavR-n2u7IkXJBPgf6kYqQxvP7ChC-gZGpHY_sqBaZd56IbnPA0T6d4ZhIvp9E7eZEoneUsiME0&amp;t=7e94aea0" type="text/javascript"></script>
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl05_TSM&amp;compress=0&amp;_TSM_CombinedScripts_=%3b%3bTelerik.Sitefinity.Resources%3afr%3aca651bf7-ab52-4d0b-838f-dc7a536af758%3a9ced59e7" type="text/javascript"></script>
+<script src="/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Scripts/Bootstrap/js/bootstrap.min.js?package=Bootstrap&amp;v=MTQuNC44MTAwLjA%3d" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CF6AFF52" />
+</div><script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl05', 'aspnetForm', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+<input type="hidden" name="ctl00$ctl05" id="ctl05" />
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.setServerId("ctl05", "ctl00$ctl05");
+Sys.Application._enableHistoryInScriptManager();
+//]]>
+</script>
+<a id="skip-link" class="btn btn-yellow accesible-hidden-element" href="#">Passer au contenu principal</a> <div hidden> <span id="new-window-0">S&#39;ouvre dans une nouvelle fen&#234;tre</span> <span id="new-window-1">Ouvre un site externe</span> <span id="new-window-2">Ouvre un site externe dans une nouvelle fen&#234;tre</span> </div> <!-- Google Tag Manager (noscript) --> <noscript> <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNHWJHC"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe> </noscript> <!-- End Google Tag Manager (noscript) --> <!-- These logos will be visible on the print view --> <img class="print-visible print-logo" src="/Assets/dist/images/print-logos/eqb_logo_horizontal_fr.svg" alt="Banque &Eacute;quitable" />  <div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="nav-header-container container-fluid" id="navbar-collapsable-group" >
+      <div class="nav-left-links-wrapper">
+          <div class="navbar-header">
+              <ul class="navbar-buttons-list-mobile">
+
+                          <li class="lang-switch-mobile navbar-toggle"><a href="/calculator">EN</a></li>
+
+                          <li>
+                              <button type="button" class="navbar-toggle login-button-mobile" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" data-parent="#navbar-collapsable-group">
+                                  <img alt="Se connecter" src="/Assets/dist/images/Log-in-mobile-icon.svg"width="22" height="23" ></img>
+                              </button>
+                          </li>
+
+                  <li>
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" data-parent="#navbar-collapsable-group">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span role="none" class="icon-bar"></span>
+                          <span role="none" class="icon-bar"></span>
+                          <span role="none" class="icon-bar"></span>
+                      </button>
+                  </li>
+
+              </ul>
+
+
+                  <a class="navbar-brand" href="/fr">
+                      <img src="/Assets/dist/images/EquitableBank-FR.svg" alt="Banque Équitable" title="Banque Équitable" width="160" height="64" />
+                  </a>
+
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" role="navigation">
+              <ul class="nav-left nav navbar-nav">
+  <li class="dropdown ">
+      <a href="/fr/residential" class="dropdown-toggle">
+          R&#233;sidentiels
+      </a>
+      <ul class="dropdown-menu">
+                          <li>
+          <a href="/fr/mortgage-products" target="_self" rel="">Produits des Pr&#234;ts hypoth&#233;caires</a>
+      </li>
+      <li>
+          <a href="/fr/mortgage-rates" target="_self" rel="">Taux des pr&#234;ts hypoth&#233;caires</a>
+      </li>
+      <li>
+          <a href="/fr/residential/&#233;valuateurs-agr&#233;es" target="_self" rel="">&#201;valuateurs agr&#233;es</a>
+      </li>
+      <li>
+          <a href="/fr/residential/marge-de-cr&#233;dit-hypoth&#233;caire" target="_self" rel="">Marge de cr&#233;dit hypoth&#233;caire</a>
+      </li>
+
+      </ul>
+  </li>
+  <li class="dropdown ">
+      <a href="/fr/commercial" class="dropdown-toggle">
+          Pr&#234;ts commerciaux
+      </a>
+      <ul class="dropdown-menu">
+                          <li>
+          <a href="/fr/business-enterprise-solutions" target="_self" rel="">Solutions de financement pour entreprises</a>
+      </li>
+      <li>
+          <a href="/fr/commercial-finance-group" target="_self" rel="">Groupe du financement commercial</a>
+      </li>
+      <li>
+          <a href="/fr/commercial/specialized-finance-group" target="_self" rel="">Groupe des finances sp&#233;cialis&#233;es</a>
+      </li>
+      <li>
+          <a href="/fr/commercial/processus-de-demande" target="_self" rel="">Processus de demande</a>
+      </li>
+      <li>
+          <a href="/fr/commercial/documents-hypoth&#233;caires-commerciaux" target="_self" rel="">Documents hypoth&#233;caires commerciaux</a>
+      </li>
+      <li>
+          <a href="/fr/commercial/commercial-equity-line-of-credit" target="_self" rel="">Marge de cr&#233;dit commerciale</a>
+      </li>
+
+      </ul>
+  </li>
+  <li class="dropdown ">
+      <a href="/fr/invest-and-save" class="dropdown-toggle">
+          Investir et &#233;pargner
+      </a>
+      <ul class="dropdown-menu">
+                          <li>
+          <a href="/fr/gic" target="_self" rel="">D&#233;p&#244;ts &#224; terme et Certificats de placement garanti (CPG)</a>
+      </li>
+      <li>
+          <a href="/fr/invest-and-save/high-interest-savings-accounts" target="_self" rel="">Compte d&#39;&#233;pargne &#224; int&#233;r&#234;t &#233;lev&#233; (C&#201;IE)</a>
+      </li>
+      <li>
+          <a href="/fr/investment-rates" target="_self" rel="">Taux</a>
+      </li>
+      <li>
+          <a href="/fr/invest-and-save/estate-services" target="_self" rel="">Succession</a>
+      </li>
+      <li>
+          <a href="/fr/cdic" target="_self" rel="">Information sur l&#39;assurance-d&#233;p&#244;ts</a>
+      </li>
+
+      </ul>
+  </li>
+  <li class="dropdown ">
+      <a href="/fr/reverse-mortgage" class="dropdown-toggle">
+          Pr&#234;t hypoth&#233;caire invers&#233;
+      </a>
+      <ul class="dropdown-menu">
+                          <li>
+          <a href="/fr/reverse-mortgage/eligibility-calculator" target="_self" rel="">Calculatrice de pr&#234;t hypoth&#233;caire invers&#233;</a>
+      </li>
+      <li>
+          <a href="/fr/reverse-mortgage/comparison-rates" target="_self" rel="">Solutions et taux d’int&#233;r&#234;t des pr&#234;ts hypoth&#233;caires invers&#233;s</a>
+      </li>
+      <li>
+          <a href="/fr/reverse-mortgage/how-it-works" target="_self" rel="">Fonctionnement des pr&#234;ts hypoth&#233;caires invers&#233;</a>
+      </li>
+      <li>
+          <a href="/fr/reverse-mortgage/learn" target="_self" rel="">Apprendre</a>
+      </li>
+      <li>
+          <a href="/fr/reverse-mortgage/advances" target="_self" rel="">Types d&#39;avances</a>
+      </li>
+      <li>
+          <a href="/fr/reverse-mortgage/prepayment-penalty-calculator" target="_self" rel="">Calculatrice de remboursement anticip&#233;</a>
+      </li>
+
+      </ul>
+  </li>
+  <li class="dropdown ">
+      <a href="/fr/insurance-lending-solutions" class="dropdown-toggle">
+          Pr&#234;ts sur Assurance Vie
+      </a>
+      <ul class="dropdown-menu">
+                          <li>
+          <a href="/fr/insurance-lending-solutions/qualification-calculator" target="_self" rel="">Calculateur de qualification &#224; la valeur de rachat de la Banque &#201;quitable</a>
+      </li>
+      <li>
+          <a href="/fr/insurance-lending-solutions/our-partnered-insurers" target="_self" rel="">Nos assureurs approuv&#233;s</a>
+      </li>
+      <li>
+          <a href="/fr/insurance-lending-solutions/ifa" target="_self" rel="">Plan de Financement Imm&#233;diat (PFI) de la Banque &#201;quitable</a>
+      </li>
+
+      </ul>
+  </li>
+  <li class=""><a href="/fr/credit-unions" target="_self" rel="">Coop&#233;ratives de cr&#233;dit</a></li>
+  <li class=""><a href="/fr/concentra-trust" target="_self" rel="">Fiducies</a></li>
+  <li class="dropdown active">
+      <a href="/fr/resources" class="dropdown-toggle">
+          Ressources et outils
+      </a>
+      <ul class="dropdown-menu">
+                          <li>
+          <a href="/fr/appraisers" target="_self" rel="">&#201;valuateurs agr&#233;es</a>
+      </li>
+      <li>
+          <a href="/fr/resources/documents-et-formulaires" target="_self" rel="">Documents et formulaires</a>
+      </li>
+      <li>
+          <a href="/fr/video-tutorials" target="_self" rel="">Tutoriels vid&#233;o</a>
+      </li>
+      <li>
+          <a href="/fr/glossary" target="_self" rel="">Glossaire</a>
+      </li>
+      <li>
+          <a href="/fr/resolving-your-concerns" target="_self" rel="">R&#233;solution de vos pr&#233;occupations</a>
+      </li>
+      <li>
+          <a href="/fr/financial-literacy" target="_self" rel="">Notions financi&#232;res &#224; l&#39;intention des consommateurs</a>
+      </li>
+      <li>
+          <a href="/fr/helpful-links" target="_self" rel="">Liens utiles</a>
+      </li>
+      <li>
+          <a href="/fr/resources/calculators" target="_self" rel="">Calculateurs</a>
+      </li>
+      <li>
+          <a href="/fr/resources/seniors" target="_self" rel="">Les a&#238;n&#233;s et nous</a>
+      </li>
+      <li>
+          <a href="/fr/resources/broker-resources" target="_self" rel="">Ressources pour courtiers</a>
+      </li>
+      <li>
+          <a href="/fr/resources/mortgage-relief-measures" target="_self" rel="">Mesures d’all&#232;gement hypoth&#233;caire</a>
+      </li>
+
+      </ul>
+  </li>
+  <li class="dropdown ">
+      <a href="/fr/about-us" class="dropdown-toggle">
+          &#192; propos
+      </a>
+      <ul class="dropdown-menu">
+                          <li class="dropdown-submenu">
+          <a href="/fr/careers" target="_self" rel="">
+              Carri&#232;res
+          </a>
+          <ul class="dropdown-menu">
+                              <li>
+          <a href="/fr/job-openings" target="_self" rel="">Possibilit&#233;s d’emploi</a>
+      </li>
+      <li>
+          <a href="/fr/development-programs" target="_self" rel="">Programmes pour &#233;tudiants et de leadership</a>
+      </li>
+      <li>
+          <a href="/fr/our-culture" target="_self" rel="">Notre Culture</a>
+      </li>
+
+          </ul>
+      </li>
+      <li>
+          <a href="/fr/community" target="_self" rel="">&#201;quitable au service de la communaut&#233;</a>
+      </li>
+      <li>
+          <a href="/fr/about-us/investor-relations" target="_blank" rel="noopener">Relations avec les investisseurs (anglais)</a>
+      </li>
+      <li>
+          <a href="/fr/about-us/nouvelles" target="_blank" rel="noopener">Les nouvelles de la Banque &#201;quitable (anglais)</a>
+      </li>
+
+      </ul>
+  </li>
+                                                  <li><a href="/fr/contact-us" class="fr contact-us-button nav-mobile-only-button"><button type="button" class="btn btn-yellow">Nous joindre</button></a></li>
+              </ul>
+          </div><!-- /.navbar-collapse -->
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2" role="navigation">
+          <ul class="nav navbar-nav navbar-right">
+                  <li><a href="/fr/contact-us" class="fr contact-us-button nav-desktop-only-button"><button type="button" class="btn btn-white">Nous joindre</button></a></li>
+                      <li class="dropdown login">
+                          <button type="button" class="btn btn-yello login-button french-login">Se Connecter</button>
+                          <ul class="dropdown-menu">
+                              <li>
+                                  <a class="login-option my-equitable-login" href="https://my.equitablebank.ca" target="_blank" rel="noopener">
+                                      Connexion pour myEquitable
+                                      <span aria-hidden="true">Accès pour clients hypothécaires et de prêts</span>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a class="login-option broker-login" href="" data-toggle="modal" data-target="#loginModal">
+                                      Connexion pour courtiers
+                                      <span aria-hidden="true">Accès au portail pour courtiers hypothécaires</span>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a class="login-option deposits-login" href="https://edocs.equitablebank.ca/ecm/Account/Login" target="_blank" rel="noopener">
+                                      Connexion pour les Services de dépôt
+                                      <span aria-hidden="true">Accès au portail pour courtiers en dépôt</span>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a class="login-option statement-share" href="https://statementshare.equitablebank.ca/" target="_blank" rel="noopener">
+                                      Partage de relevés | Se connecter
+                                      <span aria-hidden="true">Ouvrir une session pour les demandeur de prêt hypothécaires</span>
+                                  </a>
+                              </li>
+                          </ul>
+                      </li>
+
+                      <li class="lang-switch"><a href="/calculator">EN</a></li>
+          </ul>
+      </div>
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+
+
+
+
+<div class="hero-banner lazyload"
+   data-sizes="auto"
+   data-bgset="/images/default-source/default-album/calculator.tmb-0.jpg?Culture=en&amp;sfvrsn=7c56516d_1 659w, /images/default-source/default-album/calculator.tmb-thumbnail.jpg?Culture=en&amp;sfvrsn=7c56516d_1 120w, /images/default-source/default-album/calculator.jpg?sfvrsn=7c56516d_0 1996w"
+   style="background-image: url(/images/default-source/default-album/calculator.jpg?sfvrsn=7c56516d_0);
+          background-color: ;">
+</div>
+
+
+
+
+<div id="BodyContentPlaceholder_C001_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container"><div class='sfContentBlock'><h1>Calculateur des frais de remboursement anticip&eacute; d'un pr&ecirc;t hypoth&eacute;caire</h1>
+<p>Nous offrons un calculateur des frais de remboursement anticip&eacute; d'un pr&ecirc;t hypoth&eacute;caire pour vous permettre d'estimer les frais qui s'appliqueraient en date d'aujourd'hui sur un remboursement anticip&eacute; de votre pr&ecirc;t hypoth&eacute;caire. Vous pouvez modifier l'information que vous y inscrivez, comme le montant du remboursement anticip&eacute;, ce qui vous permettra de voir les r&eacute;percussions de ces changements sur les frais de remboursement anticip&eacute; estimatifs.</p>
+<p>Pour utiliser le calculateur, veuillez vous reporter aux documents suivants : votre d&eacute;claration du co&ucirc;t d&rsquo;emprunt du pr&ecirc;t hypoth&eacute;caire, votre entente de renouvellement du pr&ecirc;t hypoth&eacute;caire ou votre entente de conversion du pr&ecirc;t hypoth&eacute;caire, selon le document qui s&rsquo;applique et qui est le plus r&eacute;cent.</p>
+
+
+
+</div>
+
+
+<div class="accordion-widget   plus-symbol-style" id="" style="border-color: #D2A037;background-color: #FFF;text-align: left">
+<a href="#accordion-19b5a543-8b73-42b4-9de1-ff9860a96be8" class="accordion-toggle collapsed font-pink" data-toggle="collapse">Comprendre les remboursements anticipés de prêts hypothécaires</a>
+<div id="accordion-19b5a543-8b73-42b4-9de1-ff9860a96be8" class="collapse body ">
+<p>Pour bon nombre de nos clients, rembourser leur hypoth&egrave;que, s'en lib&eacute;rer et &eacute;conomiser des milliers de dollars en int&eacute;r&ecirc;ts constituent des objectifs importants. Pour y arriver, la Banque &Eacute;quitable offre des privil&egrave;ges de remboursement  par anticipation concurrentiels pour tous ses produits hypoth&eacute;caires. Un privil&egrave;ge de remboursement par anticipation peut inclure la possibilit&eacute; de faire, <strong>un paiement forfaitaire  jusqu&rsquo;&agrave; concurrence d&rsquo;un certain pourcentage de votre solde du capital initial ou d&rsquo;augmenter vos versements p&eacute;riodiques jusqu'&agrave; concurrence d&rsquo;un certain montant</strong>. Les privil&egrave;ges de remboursement par anticipation qui s&rsquo;appliquent &agrave; votre pr&ecirc;t hypoth&eacute;caire d&eacute;pendront du type d&rsquo;hypoth&egrave;que que vous avez contract&eacute;e avec nous et seront assujettis aux modalit&eacute;s et conditions &eacute;nonc&eacute;es dans vos documents de pr&ecirc;t hypoth&eacute;caire.</p>
+<p>Il est important que vous sachiez que si vous avez contract&eacute; avec nous un pr&ecirc;t hypoth&eacute;caire &agrave; &eacute;ch&eacute;ance fixe et que vous d&eacute;sirez rembourser le solde int&eacute;gral de votre pr&ecirc;t hypoth&eacute;caire avant l&rsquo;&eacute;ch&eacute;ance ou effectuer un paiement forfaitaire pour r&eacute;duire le capital de votre pr&ecirc;t d'une somme <strong>exc&eacute;dant</strong> le montant pr&eacute;vu par votre privil&egrave;ge de remboursement, vous devrez payer des <strong>frais de remboursement anticip&eacute;</strong>.</p>
+<p>Les <strong>frais de remboursement anticip&eacute;</strong> sont des frais per&ccedil;us par la Banque &Eacute;quitable au moment o&ugrave; vous remboursez le solde int&eacute;gral de votre pr&ecirc;t hypoth&eacute;caire ou une partie du solde en exc&eacute;dent du montant pr&eacute;vu par votre privil&egrave;ge de remboursement avant la date d&rsquo;&eacute;ch&eacute;ance. Vos documents de pr&ecirc;t hypoth&eacute;caires d&eacute;crivent de fa&ccedil;on d&eacute;taill&eacute;e tous les privil&egrave;ges de remboursement par anticipation et les frais qui s&rsquo;appliquent &agrave; votre pr&ecirc;t hypoth&eacute;caire. Il est important que vous compreniez ce que sont les frais de remboursement anticip&eacute;, dans quelles circonstances ils peuvent s'appliquer et comment vous pouvez les &eacute;viter.</p>
+<p>Pour aider nos clients &agrave; prendre des d&eacute;cisions &eacute;clair&eacute;es, nous avons pr&eacute;par&eacute; une fiche d'information intitul&eacute;e, <a href="/docs/default-source/default-document-library/eqb_mortgageprepayment_infosheet_fr.pdf?sfvrsn=aee3c105_2" target="_blank" rel="noopener">Comprendre votre hypoth&egrave;ques : Ce qu'il vous faut savoir sur les hypoth&egrave;ques et les frais de remboursement anticip&eacute;</a>, qui contient un glossaire des termes couramment employ&eacute;s dans le domaine hypoth&eacute;caire, une comparaison entre les diff&eacute;rents types de pr&ecirc;ts hypoth&eacute;caires, une description des fa&ccedil;ons de rembourser plus rapidement votre pr&ecirc;t hypoth&eacute;caire sans devoir payer de frais de remboursement anticip&eacute; et les options qui s&rsquo;offrent &agrave; vous pour &eacute;viter de payer de tels frais. Elle explique aussi comment la Banque &Eacute;quitable calcule les frais de remboursement anticip&eacute;.</p>
+<p><strong>Si vous songez &agrave; rembourser votre pr&ecirc;t hypoth&eacute;caire plus t&ocirc;t, &agrave; effectuer un paiement forfaitaire ou &agrave; accro&icirc;tre vos versements p&eacute;riodiques, veuillez vous adresser &agrave; l'un de nos sp&eacute;cialistes en hypoth&egrave;ques</strong> qui pourra vous indiquer quels frais de remboursement anticip&eacute; s&rsquo;appliqueraient, le cas &eacute;ch&eacute;ant. Il pourra aussi vous aider &agrave; d&eacute;terminer s&rsquo;il existe de possibilit&eacute;s pouvant vous permettre de les &eacute;viter.</p>
+<p>Pour en savoir davantage sur le remboursement anticip&eacute; de votre pr&ecirc;t  hypoth&eacute;caire, veuillez communiquer avec nous, au 1-888-334-3313. Si vous avez besoin de renseignements suppl&eacute;mentaires, vous pouvez aussi vous adresser &agrave; <a href="http://www.fcac-acfc.gc.ca/Fra/Pages/home-accueil.aspx" target="_blank" rel="noopener">l'Agence de la consommation en mati&egrave;re financi&egrave;re du Canada</a>.</p>
+<p>Ce calculateur ne fournit qu'une estimation des frais de remboursement anticip&eacute;, qui peut diff&eacute;rer de la somme r&eacute;elle de ces frais.</p>
+</div>
+</div>
+
+
+<div class="spacer" style="height:40px;">
+</div>
+</div>
+
+<div id="BottomContentPlaceholder_C009_Col00" class="sf_colsIn gray-box clearfix" data-sf-element="Gray Box" data-placeholder-label="Gray Box">
+<div class="spacer" style="height:40px;">
+</div><div id="BottomContentPlaceholder_C015_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container">
+<script>
+window.lang = "fr";
+</script>
+
+<div id="calculator-widget">
+
+<div class="content">
+<!-- START STEP 2 -->
+<div class="step-wrapper" data-step="2" style="display: none;" id="datastep2">
+  <div class="calc-modes-buttons">
+      <button type="button" href="" class="btn mode-selected" data-mortgage-payment-type="full">Rembourser la totalit&#233; de mon hypoth&#232;que</button>
+      <button type="button" href="" class="btn" data-mortgage-payment-type="partial">Effectuer un paiement partiel</button>
+  </div>
+
+  <!-- START form -->
+  <div class="calculator-form">
+      <div class="error box" style="display:none">
+          <div class="title">Ce formulaire contient au moins une erreur.</div>
+          <ul></ul>
+      </div>
+      <div class="row">
+          
+          <div class="col-sm-5 inputs-wrapper col-print-5">
+              <div class="form-cell all-results" data-reset-ignore="true">
+                  <div class="form-group">
+                      <label >
+                          Mon type d&#39;hypoth&#232;que : <a data-toggle="tooltip" title=" Choisissez votre type d’hypoth&#232;que."><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+                      </label>
+                          <select type="text" class="form-control" id="mortgage_type" name="mortgage_type">
+                              <option value="fixedRate">&#192; taux fixe</option>
+                              <option value="adjRate">&#192; taux variable</option>
+                              <option value="es_fixedRate">Gamme &#201;volution EQB - &#192; taux fixe</option>
+                              <option value="es_adjRate">Gamme &#201;volution EQB - &#192; taux variable</option>
+                          </select>
+                  </div>
+              </div>
+
+              <div class="form-cell all-results">
+                  <div class="form-group">
+                      <label  class="control-label two-lines">
+                          Le solde de mon hypoth&#232;que : <a data-toggle="tooltip" title=" Inscrivez le solde en capital de votre pr&#234;t hypoth&#233;caire, et non le montant total que vous avez emprunt&#233; &#224; l’origine."><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+                      </label>
+                          <div class="input-skin">
+                              <span class="brdisplay form-control">$XXX,XXX</span>
+                              <input type="number" autocomplete="off" name="outstanding_amount" id="outstanding_amount" class="brinput hidden-print form-control" aria-invalid="false">
+                          </div>
+                  </div>
+              </div>
+
+              <div class="form-cell all-results">
+                  <div class="form-group">
+                      <label  class="control-label">
+                          Mon taux d&#39;int&#233;r&#234;t annuel : <a data-toggle="tooltip" title=" Inscrivez le taux d’int&#233;r&#234;t que vous avez re&#231;u sur votre pr&#234;t hypoth&#233;caire actuel. Vous trouverez l&#39;information requise dans vos documents de pr&#234;t hypoth&#233;caire."><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+                      </label>
+                      <div class="input-skin">
+                          <span class="brdisplay form-control"></span>
+                          <input type="number" autocomplete="off" name="annual_interest_rate" id="annual_interest_rate" class="brinput hidden-print percent form-control" aria-invalid="false">
+                      </div>
+                  </div>
+              </div>
+
+              <div class="form-cell es_fixedRate-full es_fixedRate-partial es_adjRate-full es_adjRate-partial hide">
+                  <div class="form-group">
+                      <label  class=" control-label">
+                          Mon rabais de taux : <a data-toggle="tooltip" title=" Inscrivez le rabais de taux, le cas &#233;ch&#233;ant, que vous avez obtenu pour votre pr&#234;t hypoth&#233;caire actuel. Vous trouverez cette information dans vos documents de pr&#234;t hypoth&#233;caire. Aux fins du calcul, le rabais de taux s’ajoute &#224; votre taux d’int&#233;r&#234;t annuel."><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+                      </label>
+                      <div class="input-skin">
+                          <span class="brdisplay form-control"></span>
+                          <input type="number" autocomplete="off" name="discount_rate" id="discount_rate" class="brinput hidden-print percent form-control can-be-null" aria-invalid="false" disabled="disabled">
+                      </div>
+                  </div>
+              </div>
+
+              <div class="partial-pay form-cell fixedRate-partial adjRate-partial es_fixedRate-partial es_adjRate-partial" data-form-cell="true" style="display: none;">
+                  <div class="form-group">
+                      <label  class=" control-label two-lines">
+                          Montant que je souhaite rembourser par anticipation : <a data-toggle="tooltip" title=" Inscrivez, en dollars, la somme que vous souhaitez rembourser par anticipation. Les frais de remboursement anticip&#233; s’appliquent au montant qui exc&#232;de votre privil&#232;ge annuel de remboursement par anticipation. Aux fins de l’estimation des frais de remboursement anticip&#233;, ce calculateur suppose qu’aucun remboursement anticip&#233; n’a &#233;t&#233; effectu&#233; et que vous avez droit &#224; la totalit&#233; du montant pr&#233;vu conform&#233;ment au privil&#232;ge annuel de remboursement par anticipation."><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+                      </label>
+                      <div class="input-skin">
+                          <span class="brdisplay form-control">$XXX,XXX</span>
+                          <input type="number" autocomplete="off" name="amount_prepay" id="amount_prepay" class="brinput hidden-print form-control" aria-invalid="false" disabled="disabled">
+                      </div>
+                  </div>
+              </div>
+
+              <div class="partial-pay form-cell fixedRate-partial adjRate-partial es_fixedRate-partial es_adjRate-partial" data-form-cell="true" style="display: none;">
+                  <div class="form-group">
+                      <label  class="control-label two-lines">
+                          Montant initial de mon pr&#234;t hypoth&#233;caire : <a data-toggle="tooltip" title=" Entrez le montant initial de votre pr&#234;t hypoth&#233;caire – et non pas le solde actuel de votre pr&#234;t hypoth&#233;caire."><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+                      </label>
+                      <div class="input-skin">
+                          <span class="brdisplay form-control">$XXX,XXX</span>
+                          <input type="number" autocomplete="off" name="original_amount" id="original_amount" class="brinput hidden-print form-control" aria-invalid="false" disabled="disabled">
+                      </div>
+                  </div>
+              </div>
+
+              <div class="form-cell fixedRate-full fixedRate-partial es_fixedRate-full es_fixedRate-partial" data-full-cell="fixedRate-full">
+                  <div class="form-group clearfix">
+                      <label  class="control-label">
+                          Date d&#39;&#233;ch&#233;ance de mon hypoth&#232;que : <a data-toggle="tooltip" title=" Inscrivez la date d’&#233;ch&#233;ance de votre hypoth&#232;que. Il s’agit de la date &#224; laquelle le terme de votre pr&#234;t hypoth&#233;caire prend fin. Vous trouverez cette information dans vos documents hypoth&#233;caires."><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+                      </label>
+                      <div class="datepicker-wrapper">
+                          <input readonly class="span2 datepicker block-past form-control" id="maturity_date" size="16" type="text" name="maturity_date">
+                      </div>
+                  </div>
+              </div>
+
+              <div class="form-cell adjRate-full adjRate-partial es_adjRate-full es_adjRate-partial hide" data-full-cell="adjRate-full">
+                  <div class="form-group clearfix">
+                      <label  class="control-label two-lines">
+                          Date de d&#233;caissement : <a data-toggle="tooltip" title=" Date &#224; laquelle vos fonds vous ont &#233;t&#233; avanc&#233;s ou date de renouvellement ou de conversion de votre pr&#234;t hypoth&#233;caire. Vous trouverez cette information dans vos documents de pr&#234;t hypoth&#233;caire."><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+                      </label>
+                      <div class="datepicker-wrapper">
+                          <input readonly class="span2 form-control datepicker block-future" id="inception_date" disabled="disabled" size="16" type="text" name="inception_date">
+                      </div>
+                  </div>
+              </div>
+
+              <div class="form-cell fixedRate-partial  adjRate-partial es_fixedRate-partial es_adjRate-partial hide">
+                  <div class="form-group">
+                      <label  class="control-label two-lines fixedRate-full">
+                          Privil&#232;ge annuel de remboursement anticip&#233; maximal : <a data-toggle="tooltip" title=" Dans le menu d&#233;roulant, choisissez le pourcentage applicable au montant initial de votre pr&#234;t hypoth&#233;caire qui correspond &#224; votre privil&#232;ge de remboursement par anticipation auquel aucuns frais de remboursement ne s’appliquent. Vous trouverez cette information dans vos documents de pr&#234;t hypoth&#233;caire."><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+                      </label>
+                      <div class="fixedRate-full">
+                          <select type="text" class="form-control" id="maximum_annual" name="maximum_annual" disabled="disabled">
+                              <option value="15">15 %</option>
+                              <option value="20">20 %</option>
+                          </select>
+                      </div>
+                  </div>
+              </div>
+              <div class="btn-form-wrapper action-buttons">
+                  <button type="button" class="btn btnCalc" id="calculateForm">Calculer</button>
+              </div>
+          </div>
+
+          
+          <div class="col-sm-7 col-print-7" id="calculatorDescription">
+              <div class="calc-instructions" data-instructions="full">
+                          <p>Ce calculateur peut servir à estimer les frais de remboursement anticipé qui s'appliqueraient si vous remboursiez la totalité de votre prêt hypothécaire à échéance fixe avant l’échéance. Vous devez y inscrire certains détails de votre prêt hypothécaire à la Banque Équitable. Vous trouverez l'information requise dans vos documents de prêt hypothécaire ou en nous appelant au 1-888-334-3313.</p>
+
+              </div>
+              <div class="calc-instructions" data-instructions="partial" style="display: none;">
+                          <p>Ce calculateur peut servir à estimer les frais de remboursement anticipé qui s'appliqueraient si vous remboursiez une partie, mais non la totalité, de votre prêt hypothécaire à échéance fixe plus tôt que prévu. Vous devez y inscrire certains détails de votre prêt hypothécaire à la Banque Équitable. Vous trouverez l'information requise dans vos documents de prêt hypothécaire ou en nous appelant au  1-888-334-3313.</p>
+
+              </div>
+          </div>
+          
+          
+          <div class="col-sm-7 results-wrapper special-calc-results-wrapper col-print-7">
+              <!-- START results-->
+              <div id="quickresults">
+                  <div class="highlight-row result-display" style="display: none">
+                      <div class="result-box" id="results">
+                          <h1>
+                              Mes r&#233;sultats
+                              <a href="javascript:;" onclick="app.utils.print('#calculator-widget, #calculator-disclaimer');" class="reg-color btn-print pull-right"><img class="lazyload" data-src="/Assets/dist/images/calculator/print.png" src=""></a>
+                          </h1>
+                         <div class="row">
+                              <div class="clearfix result-row all-results">
+                                  <div class="col-xs-6">
+                                      Estimation des frais de remboursement anticip&#233; :<br />
+                                      <small class="l-margin">(En date du <span data-form-value="estimated_date"></span>)</small>
+                                  </div>
+                                  <div class="col-xs-6">
+                                      <span class="bold" data-form-value="estimated_charge">$XX,XXX.XX</span>
+                                  </div>
+                              </div>
+
+                              <div class="clearfix result-row all-results">
+                                  <div class="col-xs-6">Type de calcul :</div>
+                                  <div class="col-xs-6 calculation-type">
+                                      <span data-form-value="calculation_type"></span>
+
+                                      <!-- fixed rate-3 -->
+                                      <a class="eq-tooltip hide" data-mortgage-type="fixedRate" data-calculation-type="3" data-toggle="tooltip" title=" Cela signifie un montant correspondant à trois mois d’intérêt sur le montant remboursé par anticipation. On calcule ce montant en multipliant le montant remboursé par anticipation par le taux d’intérêt annuel actuel de votre prêt hypothécaire et en divisant le produit obtenu par quatre." data-toggle="modal" data-target="#infoModal"><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+
+                                      <!-- fixed rate-0 -->
+                                      <a class="eq-tooltip hide" data-mortgage-type="fixedRate" data-calculation-type="0" data-toggle="tooltip" title=" Cela signifie un montant égal au nombre de mois restants sur le terme de votre prêt hypothécaire divisé par 12, multiplié par le montant du remboursement anticipé et multiplié ensuite par le différentiel de taux d’intérêt. Le différentiel de taux d’intérêt correspond à la différence entre le taux d’intérêt annuel actuel de votre hypothécaire et le taux de référence désigné applicable." data-toggle="modal" data-target="#infoModal"><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+
+                                      <!-- adjustable rate-3 -->
+                                      <a class="eq-tooltip hide" data-mortgage-type="adjRate" data-calculation-type="3" data-toggle="tooltip" title=" Cela signifie un montant correspondant à 3 mois d’intérêt sur le montant remboursé par anticipation. On calcule ce montant en multipliant le montant remboursé par anticipation par le taux d’intérêt annuel actuel de votre prêt hypothécaire et en divisant le produit obtenu par 12 puis en multipliant le quotient obtenu par 3." data-toggle="modal" data-target="#infoModal"><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+
+                                      <!-- adjustable rate-4 -->
+                                      <a class="eq-tooltip hide" data-mortgage-type="adjRate" data-calculation-type="4" data-toggle="tooltip" title=" Cela signifie un montant correspondant à 4 mois d’intérêt sur le montant remboursé par anticipation. On calcule ce montant en multipliant le montant remboursé par anticipation par le taux d’intérêt annuel actuel de votre prêt hypothécaire et en divisant le produit obtenu par 12 puis en multipliant le quotient obtenu par 4." data-toggle="modal" data-target="#infoModal"><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+
+                                      <!-- adjustable rate-5 -->
+                                      <a class="eq-tooltip hide" data-mortgage-type="adjRate" data-calculation-type="5" data-toggle="tooltip" title=" Cela signifie un montant correspondant à 5 mois d’intérêt sur le montant remboursé par anticipation. On calcule ce montant en multipliant le montant remboursé par anticipation par le taux d’intérêt annuel actuel de votre prêt hypothécaire et en divisant le produit obtenu par 12 puis en multipliant le quotient obtenu par 5." data-toggle="modal" data-target="#infoModal"><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+
+                                      <!-- Fixed Rate ES -->
+                                      <a class="eq-tooltip hide" data-mortgage-type="es_fixedRate" data-calculation-type="3" data-toggle="tooltip" title=" Cela signifie un montant correspondant à 3 mois d’intérêt sur le montant remboursé par anticipation. On calcule ce montant en multipliant le montant remboursé par anticipation par le taux d’intérêt annuel actuel de votre prêt hypothécaire, plus tout rabais de taux que vous avez pu obtenir, et en divisant le produit obtenu par 4." data-toggle="modal" data-target="#infoModal"><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+
+                                      <!-- Fixed Rate ES -->
+                                      <a class="eq-tooltip hide" data-mortgage-type="es_fixedRate" data-calculation-type="0" data-toggle="tooltip" title=" Cela signifie un montant égal au nombre de mois restants sur le terme de votre prêt hypothécaire divisé par 12, multiplié par le montant du remboursement anticipé et multiplié ensuite par le différentiel de taux d’intérêt. Le différentiel de taux d’intérêt désigne la différence entre le taux d’intérêt annuel actuel de votre prêt hypothécaire, plus tout rabais de taux que vous avez pu obtenir, et le taux d’intérêt le plus bas que nous offrons pour un prêt hypothécaire semblable de notre gamme Évolution EQB (MD) en vigueur à la date de remboursement par anticipation, dont le terme se rapproche le plus, de la durée à courir de votre prêt hypothécaire, mais sans la dépasser. Si la durée à courir du term de votre prêt hypothécaire est inférieure à la durée la plus courte d’un prêt hypothécaire semblable, le taux d’intérêt le plus bas que nous offrons pour un prêt hypothécaire semblable de notre gamme Évolution EQB (MD) dont la durée est la plus courte s’appliquera." data-toggle="modal" data-target="#infoModal"><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+
+                                      <!-- Adjustable Rate ES - 3 -->
+                                      <a class="eq-tooltip hide" data-mortgage-type="es_adjRate" data-calculation-type="3" data-toggle="tooltip" title=" Cela signifie un montant correspondant à 3 mois d’intérêt sur le montant remboursé par anticipation. On calcule ce montant en multipliant le montant remboursé par anticipation par le taux d’intérêt annuel actuel de votre prêt hypothécaire, plus tout rabais de taux que vous avez pu obtenir, et en divisant le produit obtenu par 12, puis en multipliant le quotient obtenu par 3." data-toggle="modal" data-target="#infoModal"><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+
+                                      <!-- Adjustable Rate ES - 4 -->
+                                      <a class="eq-tooltip hide" data-mortgage-type="es_adjRate" data-calculation-type="4" data-toggle="tooltip" title=" Cela signifie un montant correspondant à 4 mois d’intérêt sur le montant remboursé par anticipation. On calcule ce montant en multipliant le montant du remboursé par anticipation par le taux d’intérêt annuel actuel de votre prêt hypothécaire, plus tout rabais de taux que vous avez pu obtenir, et en divisant le produit obtenu par 12 puis en multipliant le quotient obtenu par 4." data-toggle="modal" data-target="#infoModal"><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+
+                                      <!-- Adjustable Rate ES - 5 -->
+                                      <a class="eq-tooltip hide" data-mortgage-type="es_adjRate" data-calculation-type="5" data-toggle="tooltip" title=" Cela signifie un montant correspondant à 5 mois d’intérêt sur le montant remboursé par anticipation. On calcule ce montant en multipliant le montant du remboursé par anticipation par le taux d’intérêt annuel actuel de votre prêt hypothécaire, plus tout rabais de taux que vous avez pu obtenir, et en divisant le produit obtenu par 12 puis en multipliant le quotient obtenu par 5." data-toggle="modal" data-target="#infoModal"><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+                                  </div>
+                              </div>
+
+                              <div class="clearfix result-row adjRate-full adjRate-partial es_adjRate-full es_adjRate-partial hide">
+                                  <div class="col-xs-6">Nombre de mois &#233;coul&#233;s depuis le d&#233;bours&#233; de mon pr&#234;t hypoth&#233;caire :</div>
+                                  <div class="col-xs-6">
+                                      <span data-form-value="elapsed_time"></span>
+                                      <a class="eq-tooltip elapsed-info-box" data-toggle="tooltip" title=" Il s’agit du nombre de mois &#233;coul&#233;s pendant le term de votre pr&#234;t hypoth&#233;caire entre la date &#224; laquelle vos fond ont &#233;t&#233; d&#233;caiss&#233;s et la date &#224; laquelle vous vous proposez de rembourser int&#233;gralement votre pr&#234;t hypoth&#233;caire. Cette information sert &#224; &#233;tablir si vos frais de remboursement anticip&#233; seront fond&#233;s sur 5, 4 ou 3 mois d’int&#233;r&#234;t." data-toggle="modal" data-target="#infoModal"><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+                                  </div>
+                              </div>
+
+                              <div class="clearfix result-row fixedRate-full fixedRate-partial es_fixedRate-full es_fixedRate-partial hide">
+                                  <div class="col-xs-6">Mois restants avant l&#39;&#233;ch&#233;ance :</div>
+                                  <div class="col-xs-6 elapsed-time">
+                                      <span data-form-value="elapsed_time"></span>
+                                  </div>
+                              </div>
+
+                              <div class="clearfix result-row fixedRate-full adjRate-full es_fixedRate-full es_adjRate-full">
+                                  <div class="col-xs-6">Solde de mon hypoth&#232;que :</div>
+                                  <div class="col-xs-6" data-form-value="outstanding_amount"></div>
+                              </div>
+
+                              <div class="clearfix result-row fixedRate-partial adjRate-partial es_fixedRate-partial es_adjRate-partial">
+                                  <div class="col-xs-6">Montant initial de mon pr&#234;t hypoth&#233;caire :</div>
+                                  <div class="col-xs-6" data-form-value="original_amount"></div>
+                              </div>
+
+                              <div class="clearfix result-row all-results">
+                                  <div class="col-xs-6">Mon taux d&#39;int&#233;r&#234;t annuel :</div>
+                                  <div class="col-xs-6" data-form-value="annual_interest_rate"></div>
+                              </div>
+
+                              <div class="clearfix result-row es_fixedRate-partial es_adjRate-partial es_fixedRate-full es_adjRate-full hide">
+                                  <div class="col-xs-6">Mon rabais de taux :</div>
+                                  <div class="col-xs-6" data-form-value="discount_rate"></div>
+                              </div>
+
+                              <div class="clearfix result-row fixedRate-partial fixedRate-full es_fixedRate-partial es_fixedRate-full hide">
+                                  <div class="col-xs-6">Mon taux de r&#233;f&#233;rence :</div>
+                                  <div class="col-xs-6 reference-rate">
+                                      <span data-form-value="reference_rate"></span>
+                                      <!-- Fixed Rate ES -->
+                                      <a class="eq-tooltip es_fixedRate" data-mortgage-type="es_fixedRate" data-calculation-type="none" data-toggle="tooltip" title=" Il s’agit du taux d’intérêt de comparaison soit le taux d’intérêt actuel le plus bas que nous offrons pour un prêt hypothécaire semblable de notre gamme Évolution EQB (MD) dont le terme s’approche le plus, de la durée à courir de votre prêt hypothécaire, mais sans la dépasser. Si la durée à courir du terme de votre prêt hypothécaire est inférieure à la durée la plus courte d’un prêt hypothécaire semblable, le taux d’intérêt le plus bas que nous offrons sur un prêt hypothécaire semblable de notre gamme Évolution EQB (MD) dont la durée est la plus courte s’appliquera. Les taux de la gamme Évolution EQB (MD) sur notre site Web." data-toggle="modal" data-target="#infoModal"><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+                                      <a class="eq-tooltip hide" data-mortgage-type="fixedRate" data-calculation-type="none" data-toggle="tooltip" title=" Il s’agit du taux d’int&#233;r&#234;t de comparaison, &#224; savior le rendement de la s&#233;rie quotidienne des bons du Tr&#233;sor du gouvernement du Canada &#224; un an ou le rendement de certaines obligations types du gouvernement du Canada, selon le nombre de mois restants sur le terme de votre pr&#234;t hypoth&#233;caire." data-toggle="modal" data-target="#infoModal"><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+                                  </div>
+                              </div>
+
+                              <div class="clearfix result-row fixedRate-partial fixedRate-full es_fixedRate-partial es_fixedRate-full">
+                                  <div class="col-xs-6">Date d&#39;&#233;ch&#233;ance de mon hypoth&#232;que :</div>
+                                  <div class="col-xs-6" data-form-value="maturity_date"></div>
+                              </div>
+
+                              <div class="clearfix result-row adjRate-partial adjRate-full es_adjRate-partial es_adjRate-full hide">
+                                  <div class="col-xs-6">
+                                  Ma date de d&#233;caissement :
+                                  </div>
+                                  <div class="col-xs-6" data-form-value="inception_date"></div>
+                              </div>
+
+                              <div class="clearfix result-row all-results">
+                                  <div class="col-xs-6">Mon type d&#39;hypoth&#232;que :</div>
+                                  <div class="col-xs-6" data-form-value="mortgage_type"></div>
+                              </div>
+
+                              <div class="clearfix result-row fixedRate-partial adjRate-partial es_fixedRate-partial es_adjRate-partial hide">
+                                  <div class="col-xs-6">Montant que je souhaite rembourser par anticipation :</div>
+                                  <div class="col-xs-6" data-form-value="amount_prepay"></div>
+                              </div>
+
+                              <div class="clearfix result-row fixedRate-partial adjRate-partial es_fixedRate-partial es_adjRate-partial hide">
+                                  <div class="col-xs-6">Privil&#232;ge de remboursement anticip&#233; auquel j&#39;ai droit annuellement :</div>
+                                  <div class="col-xs-6">
+                                      <span data-form-value="privilege_amount"></span>
+                                      <a data-toggle="tooltip" title="Montant de remboursement anticip&#233; que vous pouvez effectuer durant une m&#234;me p&#233;riode de 12 mois sans frais de remboursement anticip&#233;." data-toggle="modal" data-target="#infoModal"><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+                                  </div>
+                              </div>
+
+                              <div class="clearfix result-row fixedRate-partial adjRate-partial es_fixedRate-partial es_adjRate-partial hide">
+                                  <div class="col-xs-6">Montant du paiement par anticipation assujetti aux frais de remboursement anticip&#233; :</div>
+                                  <div class="col-xs-6">
+                                      <span data-form-value="penalized_amount"></span>
+                                      <a data-toggle="tooltip" title=" Il s’agit de la diff&#233;rence entre le montant que vous voulez rembourser par anticipation et votre privil&#232;ge de remboursement anticip&#233;." data-toggle="modal" data-target="#infoModal"><img class="lazyload" data-src="/Assets/dist/images/calculator/info.png" src=""></a>
+                                  </div>
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- END results -->
+          </div>
+      </div>
+  </div>
+</div>
+<!-- END STEP 2 -->
+</div>
+</div>
+
+<script>
+app.onReady(function () {
+app.widgets.calculator.init();
+});
+</script>
+
+
+
+</div>
+
+<div class="spacer" style="height:40px;">
+</div>
+</div>
+<div id="BottomContentPlaceholder_C010_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container">
+<div class="spacer" style="height:40px;">
+</div><div class='sfContentBlock'><div class="result-display">
+<div class="result-disclaimer" id="calculator-disclaimer">
+<p>Ce montant de frais de remboursement anticip&eacute; est un calcul estimatif fourni &agrave; des fins d'information et n'est valable qu&rsquo;aujourd'hui. Les v&eacute;ritables frais de remboursement anticip&eacute; peuvent diff&eacute;rer de l'estimation obtenue. Pour conna&icirc;tre les frais de remboursement anticip&eacute; exacts, de m&ecirc;me que les autres frais li&eacute;s &agrave; un remboursement par anticipation veuillez communiquer avec nous, au 1-888-334-3313.</p>
+<p>Des frais suppl&eacute;mentaires s&rsquo;appliqueront si vous remboursez la totalit&eacute; de votre pr&ecirc;t hypoth&eacute;caire avant l&rsquo;&eacute;ch&eacute;ance. Vous trouverez l&rsquo;information sur les frais applicables dans vos documents de pr&ecirc;t hypoth&eacute;caire ou en nous appelant au 1-888-334-3313.</p>
+<p>Vous pouvez effectuer un remboursement anticip&eacute; partiel jusqu&rsquo;&agrave; concurrence d&rsquo;une somme maximale une fois par p&eacute;riode de 12 mois sans p&eacute;nalit&eacute;s &agrave; compter, dans la plupart des cas, de la date d&rsquo;ajustement des int&eacute;r&ecirc;ts de votre pr&ecirc;t hypoth&eacute;caire ou &agrave; l&rsquo;anniversaire de cette date (vous trouverez cette information dans votre d&eacute;claration du co&ucirc;t d&rsquo;emprunt, dans la section &laquo; Renseignements suppl&eacute;mentaires au sujet de votre hypoth&egrave;que &raquo;). Ce calcul suppose que vous n&rsquo;avez effectu&eacute; aucun remboursement anticip&eacute; et que la somme maximale que vous pouvez rembourser par anticipation sans devoir payer de frais de remboursement anticip&eacute; correspond &agrave; 15 % ou &agrave; 20 % du capital initial. Le montant exact d&eacute;pendra du privil&egrave;ge de remboursement par anticipation s&rsquo;appliquant &agrave; votre pr&ecirc;t hypoth&eacute;caire. Vous trouverez plus d&rsquo;information &agrave; ce sujet dans vos documents de pr&ecirc;t hypoth&eacute;caire ou en nous appelant au 1-888-334-3313.</p>
+<p>Si vous avez une hypoth&egrave;que &agrave; taux variable, les frais de remboursement anticip&eacute; calcul&eacute;s ci-dessus peuvent changer au fil du temps en raison de plusieurs facteurs, par exemple, &agrave; la suite du changement de votre solde hypoth&eacute;caire ou du montant que vous choisissez de rembourser par anticipation et/ou d'un changement du taux pr&eacute;f&eacute;rentiel de la Banque &Eacute;quitable.</p>
+<p><a onclick="$('#calcdisclaimer-btn').click(); return false;" href="#">D&eacute;gagement de responsabilit&eacute;</a></p>
+</div>
+</div>
+
+
+
+</div>
+<div class="spacer" style="height:40px;">
+</div>
+</div>
+
+
+
+<div class="modal fade general-modal-container" id="calcdisclaimer" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content" style="width: auto; max-width: px;">
+  <div class="modal-body">
+      <button type="button" class="close outside-button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+      </button>
+              <div class="general-modal-content" id="genericModalContent">
+                  <div style="padding:30px;">
+<p>Les r&eacute;sultats fournis par le calculateur des frais de remboursement anticip&eacute; d&rsquo;un pr&ecirc;t hypoth&eacute;caire reposent sur les renseignements que vous y indiquez. Ils ne constituent qu'une estimation et ne sont produits qu'&agrave; des fins informatives. Les v&eacute;ritables frais de remboursement anticip&eacute; peuvent diff&eacute;rer de l'estimation obtenue. Pour conna&icirc;tre les frais de remboursement anticip&eacute; exacts, de m&ecirc;me que les autres frais li&eacute;s &agrave; un remboursement par anticipation, veuillez communiquer avec nous, au 1-888-334-3313.</p>
+<p>La Banque &Eacute;quitable d&eacute;ploie tous les efforts raisonnables pour int&eacute;grer &agrave; ce calculateur des renseignements exacts et actualis&eacute;s, mais ne saurait en garantir l'exactitude ou l'applicabilit&eacute; dans toute situation donn&eacute;e. Il est pr&eacute;f&eacute;rable de vous adresser &agrave; l'un de nos sp&eacute;cialistes en hypoth&egrave;ques avant de prendre une d&eacute;cision d&eacute;finitive quant au remboursement anticip&eacute; d'un pr&ecirc;t hypoth&eacute;caire, pour faire en sorte que votre choix respecte l'ensemble de vos besoins financiers.</p>
+<p>Les taux indiqu&eacute;s sur notre site Web ou utilis&eacute;s dans certains exemples de calculs peuvent changer sans pr&eacute;avis.</p>
+</div>
+              </div>
+
+  </div>
+</div>
+</div>
+</div>
+<a id="calcdisclaimer-btn"
+class="general-modal-trigger-button"
+style="display: none;">
+</a>
+<script>
+; (function ($) {
+if("calcdisclaimer" !== "") {
+  $("#calcdisclaimer").on('hidden.bs.modal', function (e) {
+      var modal = $("#calcdisclaimer iframe");
+      modal.attr("src", modal.attr("src"));
+  });
+}
+})(jQuery);
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 1,"name": "Accueil","item": "https://www.equitablebank.ca/fr"},{"@type": "ListItem","position": 2,"name": "Ressources et outils","item": "https://www.equitablebank.ca/fr/resources"},{"@type": "ListItem","position": 3,"name": "Calculateur des frais de remboursement anticipé d'un prêt hypothécaire"}]}
+
+</script>
+
+<footer class="footer">
+<div class="container footer-address">
+  <div class="row">
+          <div class="col-sm-3">
+              <ul><li><strong>Banque &Eacute;quitable</strong></li><li><a href="/fr/about-us">&Agrave; propos de nous</a></li><li><a href="/fr/community">La communaut&eacute; et nous</a></li><li><a href="http://eqbank.investorroom.com/" target="_blank" rel="noopener">Relations avec les investisseurs (anglais)</a></li><li><a target="_blank" href="https://eqbank.investorroom.com/news-releases?l=50" rel="noopener">Nouvelles (anglais)</a></li><li><a  target="_blank" sfref="[documents|OpenAccessDataProvider]615eea7e-57bc-4471-ae2c-48551c66cde6" href="/docs/default-source/default-document-library/eqb-1754-cpl-code-of-conduct-jun2023-fr.pdf?sfvrsn=abbcac31_43" title="Code de conduite" rel="noopener">Code de conduite</a></li><li><a sfref="[documents|OpenAccessDataProvider]ae90da2b-6713-4b1a-8b6f-a18f09fd6fa4" href="/docs/default-source/default-document-library/eqbank---2020-sustainability-report-_frca.pdf?sfvrsn=c6cf98be_16" target="_blank" title="déclaration de responsabilité publique" rel="noopener">D&eacute;claration de responsabilit&eacute; publique</a></li><li><a href="/fr/careers">Carri&egrave;res</a></li></ul>
+          </div>
+          <div class="col-sm-3">
+              <ul><li><strong>Ressources</strong></li><li><a href="/fr/contact-us">Nous joindre</a></li><li><a href="/fr/resolving-your-concerns">R&eacute;solution de vos pr&eacute;occupations</a></li><li><a href="/fr/financial-literacy">Notions financi&egrave;res &agrave; l&rsquo;intention des consommateurs</a></li><li><a href="/fr/resources/seniors">Les a&icirc;n&eacute;s et nous</a></li></ul>
+          </div>
+          <div class="col-sm-3">
+              <ul><li><strong>Bureau Principal - Toronto</strong></li><li>Tour Banque &Eacute;quitable</li><li>30, avenue St. Clair Ouest, bureau&nbsp;700</li><li>Toronto (Ontario) M4V 3A1</li></ul>
+          </div>
+          <div class="col-sm-3">
+              <ul><li><strong>Nous joindre</strong></li><li><strong>Tel&nbsp;</strong>416-515-7000</li><li><strong>Sans frais</strong> 1-866-407-0004</li><li><strong>Fax&nbsp;</strong>416-515-7001</li><li><strong>Sans frais fax&nbsp;</strong>1-866-407-5859</li><li><strong>Courriel</strong> <a href="mailto:serviceclientele@eqbank.ca">serviceclientele@eqbank.ca</a></li><li>Suivez-nous sur :&nbsp;<a href="https://www.linkedin.com/company/equitable_bank" style="color:transparent;" rel="noopener" target="_blank"><img style="max-width:20px; height:auto;" src="/images/default-source/svgs/linkedin-icon.svg" alt="LinkedIn icon" data-fallback="/images/default-source/default-album/linkedin.png?Status=Temp&sfvrsn=d237685_0"></a>&nbsp;<a href="https://www.youtube.com/watch?v=FNcijKju5rg&amp;list=PLj5e84dE3-c0yIMLS_8qDIiwvboYXnKOs" style="color:transparent;" rel="noopener" target="_blank"><img style="max-width:20px; height:auto;" src="/images/default-source/svgs/youtube-icon.svg" alt="Youtube icon" data-fallback="/images/default-source/default-album/youtube.png?Status=Temp&sfvrsn=a91eddb_0"></a></li></ul>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid footer-nav">
+      <ul>
+          <li><a href="/fr/legal">Avis juridique</a></li>
+          <li><a href="/fr/privacy">Protection des renseignements personnels</a></li>
+          <li><a href="/fr/cdic">Info SADC</a></li>
+          <li><a href="/fr/accessibility">Accessibilité</a></li>
+          <li><a href="/fr/sitemap">Plan du site</a></li>
+          <li>© 2024 Banque Équitable. Tous droits réservés.</li>
+      </ul>
+
+</div>
+
+<button class="scroll-top-button">
+  Retourn en haut de page
+</button>
+</footer>
+</div> <div id="loginModal" class="modal fade" role="dialog"> <div class="modal-dialog"> <div class="modal-content login-modal"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal">&times;</button> <h3 class="modal-title">Ouverture de session pour courtier</h3> </div> <div class="modal-body"> <div class="row" id="loginErrors"> <div class="col-sm-10 col-sm-offset-2">
+                      Le mot de passe est incorrect.
+                  </div> </div> <div class="row"> <div class="col-sm-3"> <label for="loginPassword">Mot de passe</label> </div> <div class="col-sm-9"> <input type="password" id="loginPassword" value="" autofocus> </div> </div> <div class="row"> <div class="col-sm-9 col-sm-offset-3 loader-container"> <button type="button" class="btn btn-yellow" id="loginBtn">Ouverture</button> <div class="loader loader--small loader--login loader--off" id="loginLoader"></div> </div> </div> <div class="row"> <div class="col-sm-12"> <u><i><a class="request-password" href="mailto:brokerupdate@eqbank.ca?subject=Request for Mortgage Broker Login&body=Please include your brokerage name, RBM, and contact information below">Demande d'accès</a></i></u> </div> </div> </div> </div> </div> </div> <script src="/Assets/vendor/spectrum/spectrum.js" type="text/javascript"></script><script src="/Assets/dist/js/vendor.min.js?v=1699651462817" type="text/javascript"></script><script src="/Assets/dist/js/main.min.js?v=1714760916170" type="text/javascript"></script> <script>
+  var isDesigner = false;
+  var elements = document.getElementsByClassName("disabled-container");
+  while (elements.length > 0) {
+      elements[0].parentNode.removeChild(elements[0]);
+  }
+</script> 
+
+<script type="text/javascript">
+//<![CDATA[
+window.__TsmHiddenField = $get('ctl05_TSM');;(function() {
+              function loadHandler() {
+                  var hf = $get('ctl06_TSSM');
+                  if (!hf._RSSM_init) { hf._RSSM_init = true; hf.value = ''; }
+                  hf.value += ';Telerik.Sitefinity.Resources, Version=14.4.8100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563:fr:ca651bf7-ab52-4d0b-838f-dc7a536af758:7a90d6a';
+                  Sys.Application.remove_load(loadHandler);
+              };
+              Sys.Application.add_load(loadHandler);
+          })();//]]>
+</script>
+</form><script>
+  F9.Chat.Wrapper.init({
+    cdn: 'prod-ca',
+    useBusinessHours: false,
+    languages: {"enabled": true, "backgroundColor": "#65758e" },
+    l10n: {
+      en: {
+        "messenger": {
+          "customText": {
+            "formErrorInvalidEmail": "L'adresse électronique est requise",
+            "headerText": "Comment pouvons nous aider?",
+            "inputPlaceholder": "Tapez un message...",
+            "inputPlaceholderBlocked": "Tapez un message...",
+            "locationNotSupported":
+              "Votre navigateur ne prend pas en charge les services de localisation.",
+            "locationServicesDenied":
+              "Ce site Web ne peut pas accéder à votre emplacement.",
+            "soundNotification": "Activer le son",
+            "printTranscipt": "Imprimer la transcription",
+            "cancelConversation": "Annuler",
+            "startConversation": "Démarrer la discussion",
+            "closeConfirmationMessage":
+              "Êtes-vous sûr de vouloir mettre fin à la discussion ?",
+            "closeConfirmationCancel": "Annuler",
+            "closeConfirmationEndChat": "Mettre fin à la discussion",
+            "welcomeHeader": "Bienvenue !",
+            "welcomeDescription":
+              "Avant de commencer, veuillez remplir les détails ci-dessous.",
+            "languageContinue": "Continuer",
+            "languageCancel": "Annuler",
+            "conversationTerminated": "La conversation est terminée.",
+            "afterHoursHelpText":"En dehors des heures d' ouverture",           
+            "outOfBusinessHoursMessageTitle": "En dehors des heures de bureau",
+            "afterHoursEmailSentSuccess": "Succès",
+            "afterHoursEmailSentMessage": " L'email a été envoyé",
+            "afterHoursEmailModalClose": "Annuler",
+            "afterHoursStartNew": "Commencer nouveau",
+            "afterHoursSendEmail": "Envoyer e-mail",
+            "afterHoursSendEmailCancel": "Annuler",
+            "chatEndedMessage": "Votre conversation est terminée",
+            "downloadTranscript": "Télécharger la transcription",
+            "clearHistory": "Histoire claire",
+            "startNewChat": "Démarrer une nouvelle discussion",
+            "closeWindow": "Annuler",
+            "endChatconfirmationHeader": "Terminer la discussion",
+            "isRequiredText": "est requis",
+            "isTypingText": "est en train d'écrire",
+            "areTypingText": "tapez",
+            "unknownUser": "Utilisateur inconnu",
+            "clearHistoryMessage": "votre historique sera effacé dans",
+          },
+        },
+        "systemMessages": {
+          "conversationCreated": "Merci de nous avoir contactés.",
+          "participantAccepted": "Vous avez été connecté à un agent.",
+          "participantJoined": "Vous avez été connecté à un agent.",
+          "participantLeft": "Un participant a rejoint le chat.",
+          "transferredToParticipant": "Le discussion a été transféré.",
+          "transferredToGroup": "Le discussion a été transféré.",
+          "conversationTerminated": "La conversation s'est terminée",
+        },
+        "captureFields": [
+          {
+            "k": "campaign",
+            "l": "Sujet",
+            "p": "Sélectionner un sujet...",
+            "o": [
+              { "v": "Chat French - Autres", l: "Autres" },
+              {
+                "v": "Chat French - Changements de paiement permanents",
+                "l": "Changements de paiement permanents",
+              },
+              { "v": "Chat French - Comptes en ligne", l: "Comptes en ligne" },
+              {
+                "v": "Chat French - Extensions et paiements manqués",
+                "l": "Extensions et paiements manqués",
+              },
+              {
+                "v": "Chat French - Hypothèques inversées",
+                "l": "Hypothèques inversées",
+              },
+              { "v": "Chat French - Prêts dassurance", l: "Prêts dassurance" },
+              {
+                "v": "Chat French - Renouvellements et conversions",
+                "l": "Renouvellements et conversions",
+              },
+              { "v": "Chat French - Taxes foncières", l: "Taxes foncières" },
+            ],
+          },
+          { "k": "name", "l": "Nom", "p": "Entrez votre nom…" },
+          { "k": "email", "l": "Adresse e-mail", "p": "Entrez votre e-mail..." },
+        ],
+      },
+    },
+    prepopulatedFields: [{"k":"Question","v":"French Online Chat"}],
+    "messenger":{
+   "integrationId":"5c3afa3c-9b05-4800-8ff8-64861e388b84",
+   "soundNotificationEnabled":true,
+   "transcriptPrintingEnabled":true,
+   "menuItems":{
+      "imageUpload":false,
+      "fileUpload":false,
+      "shareLocation":false
+   },
+   "embedded":false,
+   "businessName":"Chat Banque Équitable",
+   "browserStorage":"sessionStorage",
+   "fixedHeader":false,
+   "displayStyle":"button",
+   "customColors":{
+      "brandColor":"c33991",
+      "conversationColor":"c33991",
+      "actionColor":"c33991"
+   }
+  },
+    clearMessagesTimeout: 10,
+  });
+
+</script></body> </html>
+
