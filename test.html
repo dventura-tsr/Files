@@ -1,0 +1,24 @@
+<html>
+<head>
+<script src="https://cdn.prod.us.five9.net/static/alpha/chat/wrapper/index.js"></script>
+</head>
+
+<body>
+
+<script>
+
+  F9.Chat.Wrapper.init({
+    cdn: 'alpha-us',
+    useBusinessHours: false,
+    languages: {"enabled":false,"backgroundColor":"#65758e"},
+    l10n: {"en":{"messenger":{"customText":{}},"systemMessages":{"transferredToParticipant":"The chat has been transferred to {name}.","transferredToGroup":"That chat has been transferred to group {group}."},"captureFields":[{"k":"first_name","l":"First Name","p":"Enter First Name"},{"k":"last_name","l":"Last Name","p":"Enter Last Name"},{"k":"Question","l":"Question","p":"What can we help you with today?"},{"k":"email","l":"Email Address","p":"Enter your email..."}]}},
+    prepopulatedFields: [{"k":"campaign","v":"Dan_Chat"},{"k":"name","v":"first_name" + "last_name"}],
+    messenger: {"integrationId":"6227e8d6b2944300f32d37a9","soundNotificationEnabled":true,"transcriptPrintingEnabled":false,"menuItems":{"imageUpload":true,"fileUpload":true,"shareLocation":true},"embedded":false,"setViewportScale":false,"browserStorage":"sessionStorage","hideWidgetAfterBusinessHours":false,"openLinkInSameTab":false,"scheduleCallback":{"isCallbackEnabled":false,"requestCallbackList":"","customConfirmationMessage":"We will call you as soon as we can at [PHONE]","web2CampaignAPIHost":""},"fixedHeader":false,"displayStyle":"button","customColors":{"brandColor":"65758e","conversationColor":"4B5DFF","actionColor":"4B5DFF"},"carouselType":"default"},
+    clearMessagesTimeout: 3
+  });
+  </script>
+  
+  
+  
+</body>
+</html>
