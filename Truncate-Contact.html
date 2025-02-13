@@ -7,25 +7,33 @@
 <script>
   // Function to update the "name" field dynamically
   function updateNameField() {
+    console.log("Updating name field...");
+    
     // Select the first name and last name input fields
     const firstNameInput = document.querySelector('input[name="first_name"]');
     const lastNameInput = document.querySelector('input[name="last_name"]');
 
-    // If both fields exist, listen for input changes
     if (firstNameInput && lastNameInput) {
       function setFullName() {
         const fullName = `${firstNameInput.value.trim()} ${lastNameInput.value.trim()}`.trim();
 
-        // Update the prepopulated fields with the full name
-        F9.Chat.Wrapper.updatePrepopulatedFields([
-          { "k": "campaign", "v": "Dan_Chat" },
-          { "k": "name", "v": fullName }
-        ]);
+        // Ensure F9.Chat.Wrapper.updatePrepopulatedFields exists before calling it
+        if (F9.Chat.Wrapper && typeof F9.Chat.Wrapper.updatePrepopulatedFields === "function") {
+          F9.Chat.Wrapper.updatePrepopulatedFields([
+            { "k": "campaign", "v": "Dan_Chat" },
+            { "k": "name", "v": fullName }
+          ]);
+          console.log("Updated prepopulated fields with full name:", fullName);
+        } else {
+          console.error("updatePrepopulatedFields is not available");
+        }
       }
 
       // Attach event listeners to update the name in real-time
       firstNameInput.addEventListener("input", setFullName);
       lastNameInput.addEventListener("input", setFullName);
+    } else {
+      console.error("First name or last name input field not found");
     }
   }
 
@@ -85,11 +93,14 @@
     clearMessagesTimeout: 3
   });
 
-  // Wait for the chat widget to load before running updateNameField
-  F9.Chat.Wrapper.on('onLoad', function() {
-    console.log("Chat Loaded, attaching name update handler...");
-    setTimeout(updateNameField, 1000); // Ensure fields are rendered
-  });
+  // Polling method to check when chat is ready
+  const checkChatReady = setInterval(() => {
+    if (F9.Chat.Wrapper && typeof F9.Chat.Wrapper.updatePrepopulatedFields === "function") {
+      console.log("Chat is ready. Running updateNameField...");
+      updateNameField();
+      clearInterval(checkChatReady);
+    }
+  }, 1000); // Check every second
 
 </script>
 </body>
