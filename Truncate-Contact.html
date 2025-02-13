@@ -5,16 +5,81 @@
 
 <body>
 <script>
+  // Function to update the "name" field dynamically
+  function updateNameField() {
+    // Get values from captureFields
+    const firstNameField = F9.Chat.Wrapper.getCaptureFieldValue("first_name") || "";
+    const lastNameField = F9.Chat.Wrapper.getCaptureFieldValue("last_name") || "";
+
+    // Combine first and last names
+    const fullName = `${firstNameField} ${lastNameField}`.trim();
+
+    // Update prepopulatedFields dynamically
+    F9.Chat.Wrapper.updatePrepopulatedFields([
+      {"k": "campaign", "v": "Dan_Chat"},
+      {"k": "name", "v": fullName}
+    ]);
+  }
+
+  // Initialize chat
   F9.Chat.Wrapper.init({
     cdn: 'alpha-us',
     useBusinessHours: false,
-    languages: {"enabled":false,"backgroundColor":"#65758e"},
-    l10n: {"en":{"messenger":{"customText":{}},"systemMessages":{"transferredToParticipant":"The chat has been transferred to {name}.","transferredToGroup":"That chat has been transferred to group {group}."},"captureFields":[{"k":"first_name","l":"First Name","p":"Enter your name..."},{"k":"email","l":"Email Address","p":"Enter your email..."},{"k":"Question","l":"Question","p":"What can we help you with today?"},{"k":"last_name","l":"Last Name","p":"Enter your last name..."}]}},
-    prepopulatedFields: [{"k":"campaign","v":"Dan_Chat"},{"k":"name","v":"Test Test"}],
-    messenger: {"integrationId":"6227e8d6b2944300f32d37a9","soundNotificationEnabled":true,"transcriptPrintingEnabled":false,"menuItems":{"imageUpload":true,"fileUpload":true,"shareLocation":true},"embedded":false,"setViewportScale":false,"browserStorage":"sessionStorage","hideWidgetAfterBusinessHours":false,"openLinkInSameTab":false,"scheduleCallback":{"isCallbackEnabled":false,"requestCallbackList":"","customConfirmationMessage":"We will call you as soon as we can at [PHONE]","web2CampaignAPIHost":""},"fixedHeader":false,"displayStyle":"button","customColors":{"brandColor":"65758e","conversationColor":"4B5DFF","actionColor":"4B5DFF"},"carouselType":"default"},
+    languages: {"enabled": false, "backgroundColor": "#65758e"},
+    l10n: {
+      "en": {
+        "messenger": {"customText": {}},
+        "systemMessages": {
+          "transferredToParticipant": "The chat has been transferred to {name}.",
+          "transferredToGroup": "That chat has been transferred to group {group}."
+        },
+        "captureFields": [
+          {"k": "first_name", "l": "First Name", "p": "Enter your name..."},
+	        {"k": "last_name", "l": "Last Name", "p": "Enter your last name..."},
+          {"k": "email", "l": "Email Address", "p": "Enter your email..."},
+          {"k": "Question", "l": "Question", "p": "What can we help you with today?"}       
+        ]
+      }
+    },
+    prepopulatedFields: [
+      {"k": "campaign", "v": "Dan_Chat"},
+      {"k": "name", "v": ""}
+    ],
+    messenger: {
+      "integrationId": "6227e8d6b2944300f32d37a9",
+      "soundNotificationEnabled": true,
+      "transcriptPrintingEnabled": false,
+      "menuItems": {
+        "imageUpload": true,
+        "fileUpload": true,
+        "shareLocation": true
+      },
+      "embedded": false,
+      "setViewportScale": false,
+      "browserStorage": "sessionStorage",
+      "hideWidgetAfterBusinessHours": false,
+      "openLinkInSameTab": false,
+      "scheduleCallback": {
+        "isCallbackEnabled": false,
+        "requestCallbackList": "",
+        "customConfirmationMessage": "We will call you as soon as we can at [PHONE]",
+        "web2CampaignAPIHost": ""
+      },
+      "fixedHeader": false,
+      "displayStyle": "button",
+      "customColors": {
+        "brandColor": "65758e",
+        "conversationColor": "4B5DFF",
+        "actionColor": "4B5DFF"
+      },
+      "carouselType": "default"
+    },
     clearMessagesTimeout: 3
   });
-  </script>
 
+  // Wait for the chat to be ready, then update the name field
+  setTimeout(updateNameField, 2000); // Adjust delay if needed
+
+</script>
 </body>
 </html>
