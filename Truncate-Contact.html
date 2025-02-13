@@ -7,14 +7,14 @@
 <script>
   // Function to update the "name" field dynamically
   function updateNameField() {
-    // Get values from captureFields
-    const firstNameField = F9.Chat.Wrapper.getCaptureFieldValue("first_name") || "";
-    const lastNameField = F9.Chat.Wrapper.getCaptureFieldValue("last_name") || "";
+    // Retrieve capture field values
+    const firstNameField = document.querySelector('input[name="first_name"]')?.value || "";
+    const lastNameField = document.querySelector('input[name="last_name"]')?.value || "";
 
     // Combine first and last names
     const fullName = `${firstNameField} ${lastNameField}`.trim();
 
-    // Update prepopulatedFields dynamically
+    // Update prepopulated fields dynamically
     F9.Chat.Wrapper.updatePrepopulatedFields([
       {"k": "campaign", "v": "Dan_Chat"},
       {"k": "name", "v": fullName}
@@ -35,7 +35,7 @@
         },
         "captureFields": [
           {"k": "first_name", "l": "First Name", "p": "Enter your name..."},
-	        {"k": "last_name", "l": "Last Name", "p": "Enter your last name..."},
+          {"k": "last_name", "l": "Last Name", "p": "Enter your last name..."},
           {"k": "email", "l": "Email Address", "p": "Enter your email..."},
           {"k": "Question", "l": "Question", "p": "What can we help you with today?"}       
         ]
@@ -77,8 +77,11 @@
     clearMessagesTimeout: 3
   });
 
-  // Wait for the chat to be ready, then update the name field
-  setTimeout(updateNameField, 2000); // Adjust delay if needed
+  // Wait for the chat widget to load completely before executing updateNameField
+  F9.Chat.Wrapper.on('onLoad', function() {
+    console.log("Chat Loaded, updating name field...");
+    setTimeout(updateNameField, 1000); // Ensure data is available
+  });
 
 </script>
 </body>
