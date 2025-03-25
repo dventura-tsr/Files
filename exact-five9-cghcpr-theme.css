@@ -1,0 +1,125 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script  type="text/javascript" src="https://psapps006.scl.five9.com/ps-live-chat/Five9ChatPlugin.js"></script>
+</head>
+
+<body>
+
+<script>
+$(document).ready(function () {
+    let baseUrl = location.protocol + "//" + location.host;
+    let prod = window.location.hostname.toLowerCase() == "www.cologuardhcp.com" || window.location.hostname.toLowerCase() == "exactsciences.net";
+    let appId = prod ? "Exact Sciences" : "Exact Sciences Dev";
+    let campaignName = prod ? "Chat-PrS - Inbound" : "Chat-PrS - Inbound";
+    let domain = prod ? "Exact Sciences VCC" : "Exact Sciences - Developer Program";
+
+   /* console.log("App ID: " + appId + " | Campaign: " + campaignName + " | Domain: " + domain + " | Prod: " + prod);*/
+
+    let options = {
+        "appId": appId,
+        "region": "USA",
+        "campaignName": campaignName,
+        "domain": domain,
+        "title": "Exact Sciences Live Chat",
+        "subtitle": "Chat with Us",
+        "chatStartImageAlt": "",
+        "chatStartMessage": "Thank you for connecting with Exact Sciences. A specialist will be with you shortly.<br><br> By using this chat feature you consent that Exact Sciences and its chat technology provider can record this chat. This is in accordance with Exact Sciences Privacy Policy and Terms of Use.".replace(/\n/g, '<br>'),
+        "showEndButton": false,
+        "autofocus": true,
+        "showTimeStamp": false,
+        "launcherOpenLabel": "Chat",
+        "launcherOpenText": "Chat",
+        "maxHeight": "600",
+        "titleBackgroundColor": "#001963",
+        "welcomeTextColor": "#ffffff",
+        "welcomeBubbleColor": "#001963",
+        "agentTextColor": "#ffffff",
+        "agentBubbleColor": "#001963",
+        "customerTextColor": "#ffffff",
+        "customerBubbleColor": "#0087ed",
+        "buttonBackgroundColor": "#ef6f1a",
+        "surveyStyle": "codetrigger",
+        "surveyFormId": "7373",
+        "surveyRatingColor": "#000000",
+        "useBusinessHours": true,
+        "afterHoursEmail": false,
+        "afterHoursHide": true,
+        "noAgentsEmail": false,
+        "noAgentsHide": true,
+        launcherButton: baseUrl + "https://dventura-tsr.github.io/Files/chat-button.svg",
+        closeButton: baseUrl + "/-/media/base-themes/Five9 PS Live Chat CG HCP R/images/clear-button.svg",
+        minimizeButton: baseUrl + "/-/media/base-themes/Five9 PS Live Chat CG HCP R/images/minimize-button.svg",
+        hoverButton: baseUrl + "https://dventura-tsr.github.io/Files/chat-button-hover.svg",
+        css: baseUrl + "https://colorguarddhcp.com/-/media/base-themes/Five9 PS Live Chat CG HCP R/unminified/styles/exact-five9-cghcpr-theme.css?v=20240122.2310",
+        "miniForm": false,
+        "mobile": true
+    };
+    /*options.callback = callback;*/
+    Five9ChatPlugin(options);
+
+    $(document).on("click", "a.chat-link", function (e) {
+        e.preventDefault();
+        $("#five9OpenChatButton").click();
+        $(".email-button").click();
+    });
+
+    const chatButton = $('#five9OpenChatButton');
+    const chatButtonImg = chatButton.children('img');
+    const chatIframeWidget = $('#five9LiveChatWidget');
+
+    chatIframeWidget.insertAfter('#five9OpenChatButton');
+
+    chatButton
+        .hover(
+            function () {
+                chatButtonImg.attr('src', debouncedChatButtonState(true));
+            },
+            function () {
+                chatButtonImg.attr('src', debouncedChatButtonState());
+            }
+        )
+        .on({
+            focus: function () {
+                chatButtonImg.attr('src', debouncedChatButtonState(true));
+            },
+            blur: function () {
+                chatButtonImg.attr('src', debouncedChatButtonState());
+            },
+            click: function () {
+                options.open = !options.open;
+                chatButtonImg.hide();
+                chatButtonImg.attr('src', debouncedChatButtonState(true));
+                chatButtonImg.show(700);
+            },
+        });
+
+    function chatButtonState(outOfFocus) {
+        let imgBtnSrc = options.minimizeButton;
+        if (!options.open && outOfFocus) {
+            imgBtnSrc = options.hoverButton;
+        } else if (!options.open) {
+            imgBtnSrc = options.launcherButton;
+        }
+        return imgBtnSrc;
+    }
+
+    // Debounce utility function
+    function debounce(func, wait) {
+        let timeout;
+        return function(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func.apply(this, args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+
+    // Apply debounce to the chatButtonState function
+    const debouncedChatButtonState = debounce(chatButtonState, 300); // Adjust the delay as needed
+});
+</script>
+</body>
+</html>
