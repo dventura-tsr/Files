@@ -1,0 +1,46 @@
+section.flex.flex-col.gap-2.w-full.justify-center.items-center::after {
+	font-size: 12px;
+	color: inherit;
+	text-align: left;
+	display: block;
+	content: "By using this chat feature you consent that Exact Sciences and its chat technology provider can record this chat. This is in accordance with Exact Sciencesâ€™ Privacy Policy and Terms of Use.";
+	margin: 10px 0px;
+	padding: 0px 10px;
+}
+
+#root input,
+#root select,
+#root textarea {
+	font-size: 16px !important;
+}
+
+.f9ChatMinimizedButton {
+	width: 150px !important;
+	height: 80px !important;
+}
+
+
+#launchButton {
+	width: 125px; /* Adjust the width and height as needed */
+	height: 60px;
+	background-image: url('/-/media/base-themes/Five9%20PS%20Live%20Chat%20CG%20HCP%20R/images/chat-button.svg');
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-position: left;
+	border: none; /* Remove border if any */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent !important;
+}
+
+/* Hide the SVG inside the button */
+#launchButton svg {
+	display: none;
+}
+
+/* Hover and focus state */
+#launchButton:hover,
+#launchButton:focus {
+	background-image: url('/-/media/base-themes/Five9%20PS%20Live%20Chat%20CG%20HCP%20R/images/chat-button-hover.svg');
+}
