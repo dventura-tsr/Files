@@ -23,7 +23,7 @@ section.flex.flex-col.gap-2.w-full.justify-center.items-center::after {
 #launchButton {
 	width: 125px; /* Adjust the width and height as needed */
 	height: 60px;
-	background-image: url('/-/media/base-themes/Five9%20PS%20Live%20Chat%20CG%20HCP%20R/images/chat-button.svg');
+	background-image: url('https://www.cologuard.com/-/media/base-themes/Five9%20PS%20Live%20Chat%20CG%20HCP%20R/images/chat-button.svg);
 	background-size: auto;
 	background-repeat: no-repeat;
 	background-position: left;
@@ -42,5 +42,5 @@ section.flex.flex-col.gap-2.w-full.justify-center.items-center::after {
 /* Hover and focus state */
 #launchButton:hover,
 #launchButton:focus {
-	background-image: url('/-/media/base-themes/Five9%20PS%20Live%20Chat%20CG%20HCP%20R/images/chat-button-hover.svg');
+	background-image: url('https://www.cologuard.com/-/media/base-themes/Five9%20PS%20Live%20Chat%20CG%20HCP%20R/images/chat-button-hover.svg');
 }
