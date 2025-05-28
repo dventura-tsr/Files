@@ -34,92 +34,17 @@
       </div>
     </div>
   </div>
-  <script>
-    var nameParam = "";
-    var emailParam = "user@cvrconnect.com";
-    var questionParam = "Need Help! for " + nameParam;
-    var cmfParam = "";
-    var params = JSON.parse('[]');
-    var captureFields = null;
-    var baseParams = [{
-        "k": "campaign",
-        "v": "Beta Chat"
-      }, {
-        "k": "name",
-        "v": nameParam
-      },
-      {
-        "k": "Question",
-        "v": questionParam
-      },
-      {
-        "k": "CDK.CMF",
-        "v": ""
-      }
-    ];
-          var captureFields = [{
-        "k": "email",
-        "l": "Email Address",
-        "p": "Enter your email..."
-      }];
-        params.map(function(value, key) {
-      baseParams.push(value)
-    })
 
-    console.log(baseParams);
-    F9.Chat.Wrapper.init({
-      cdn: 'prod',
-      useBusinessHours: false,
-      languages: {
-        "enabled": false,
-        "backgroundColor": "#E0E3E8"
-      },
-      l10n: {
-        "en": {
-          "messenger": {
-            "customText": {}
-          },
-          "systemMessages": {
-            "conversationCreated": "Welcome " + nameParam + "!",
-            "transferredToParticipant": "The chat has been transferred to {name}.",
-            "transferredToGroup": "That chat has been transferred to group {group}."
-          },
-          "captureFields": captureFields
-        }
-      },
-      prepopulatedFields: baseParams,
-      messenger: {
-        "integrationId": "6953dca1-f22e-4188-9a3a-0573455bd427",
-        "soundNotificationEnabled": true,
-        "transcriptPrintingEnabled": false,
-        "menuItems": {
-          "imageUpload": true,
-          "fileUpload": true,
-          "shareLocation": true
-        },
-        "embedded": true,
-        "containerId": 'ChatContainer',
-        "setViewportScale": false,
-        "businessName": "CVR Support Chat",
-        "browserStorage": "sessionStorage",
-        "hideWidgetAfterBusinessHours": false,
-        "scheduleCallback": {
-          "isCallbackEnabled": false,
-          "requestCallbackList": "",
-          "customConfirmationMessage": "We will call you as soon as we can at [PHONE]",
-          "web2CampaignAPIHost": ""
-        },
-        "fixedHeader": false,
-        //"displayStyle": "window",
-        "customColors": {
-          "brandColor": "019cde",
-          "conversationColor": "019cde",
-          "actionColor": "019cde"
-        },
-        "carouselType": "default"
-      },
-      clearMessagesTimeout: 3
-    });
+<script>
+  F9.Chat.Wrapper.init({
+    cdn: 'prod',
+    useBusinessHours: false,
+    languages: {"enabled":false,"backgroundColor":"#65758e"},
+    l10n: {"en":{"messenger":{"customText":{}},"systemMessages":{"transferredToParticipant":"The chat has been transferred to {name}.","transferredToGroup":"That chat has been transferred to group {group}."},"captureFields":[{"k":"name","l":"Name","p":"Enter your name..."},{"k":"email","l":"Email Address","p":"Enter your email..."},{"k":"Question","l":"Question","p":"What can we help you with today?"}]}},
+    prepopulatedFields: [{"k":"campaign","v":"CVR_Chat"}],
+    messenger: {"integrationId":"950f1a40-a7cf-4f0a-94ea-7d007a9d4ce5","soundNotificationEnabled":true,"transcriptPrintingEnabled":false,"menuItems":{"imageUpload":true,"fileUpload":true,"shareLocation":true},"embedded":false,"setViewportScale":false,"browserStorage":"sessionStorage","browserLogLevel":{"info":true,"debug":true,"error":true},"hideWidgetAfterBusinessHours":false,"openLinkInSameTab":false,"scheduleCallback":{"isCallbackEnabled":false,"requestCallbackList":"","customConfirmationMessage":"We will call you as soon as we can at [PHONE]","web2CampaignAPIHost":""},"fixedHeader":false,"displayStyle":"button","customColors":{"brandColor":"65758e","conversationColor":"4B5DFF","actionColor":"4B5DFF"},"carouselType":"default"},
+    clearMessagesTimeout: 3
+  });
   </script>
 </body>
 
