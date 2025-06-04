@@ -1,0 +1,98 @@
+<script>
+  F9.Chat.Wrapper.init({
+    cdn: 'prod',
+    useBusinessHours: true,
+    languages: {
+      enabled: false,
+      backgroundColor: '#ff003e'
+    },
+    l10n: {
+      en: {
+        messenger: {
+          customText: {
+            actionPostbackError: "An error occurred while processing your action. Please try again.",
+            clickToRetry: "Message not delivered. Click to retry.",
+            couldNotConnect: "Offline. You will not receive messages.",
+            couldNotConnectRetry: "Reconnecting...",
+            couldNotConnectRetrySuccess: "You're back online!",
+            fileTooLargeError: "Max file size limit exceeded ({size}).",
+            fileTypeError: "Unsupported file type.",
+            formErrorInvalidEmail: "Email is invalid.",
+            headerText: "How can we help you?",
+            inputPlaceholder: "Type a message.",
+            messageError: "An error occurred while sending your message. Please try again.",
+            messageIndicatorTitleSingular: "{count} New Message",
+            messageIndicatorTitlePlural: "{count} New Messages",
+            messageRelativeTimeDay: "{value}d ago",
+            messageRelativeTimeHour: "{value}h ago",
+            messageRelativeTimeJustNow: "Just now",
+            messageRelativeTimeMinute: "{value}m ago",
+            messageTimestampFormat: "h:mm A",
+            messageDelivered: "Delivered",
+            messageSeen: "Seen",
+            messageSending: "Sending...",
+            messageTooLongError: "Max message size limit exceeded {size}.",
+            notificationSettingsConnected: "Connected",
+            sendButtonText: "Send",
+            unsupportedMessageType: "Unsupported message type.",
+            unsupportedActionType: "Unsupported action type.",
+            soundNotification: "Sound",
+            startConversation: "Start",
+            closeConfirmationMessage: "Are you sure you want to end the chat?",
+            closeConfirmationCancel: "Cancel",
+            closeConfirmationEndChat: "End Chat"
+          }
+        },
+        systemMessages: {
+          conversationCreated: "We're connecting you to an associate right now. We'll let you know as soon as they are connected.",
+          participantAccepted: "You've been connected to an associate.",
+          participantJoined: "An associate has joined the chat.",
+          participantLeft: "An associate has left the chat.",
+          transferredToParticipant: "The chat has been transferred. Please wait for another associate to continue the conversation.",
+          transferredToGroup: "The chat has been transferred. Please wait for another associate to continue the conversation.",
+          conversationTerminated: "The conversation has ended."
+        },
+        captureFields: [
+          {
+            k: "Question",
+            l: "Hi, I'm here to help. Do you have any questions?",
+            p: ""
+          }
+        ]
+      }
+    },
+    prepopulatedFields: [
+      { k: "campaign", v: "DEV - CHT - MR Member Recovery" },
+      { k: "name", v: "Scarlett Lucy" },
+      { k: "email", v: "scarlett+lucy+498611438@tlcqa.com" },
+      { k: "Member.memberId", v: "294734435" },
+      { k: "Member.account_1_id", v: 232613723 },
+      { k: "Member.account_1_bucket_number", v: 3 },
+      { k: "Delinquent", v: true }
+    ],
+    messenger: {
+      integrationId: "646b823eca8d6f5ea2afc110",
+      soundNotificationEnabled: true,
+      transcriptPrintingEnabled: false,
+      menuItems: {
+        imageUpload: false,
+        fileUpload: false,
+        shareLocation: true
+      },
+      embedded: true,
+      businessName: "LendingClub",
+      businessIconUrl: "https://static.lendingclub.com/www/src/hosted/chatbot/assets/lc-logo.png",
+      buttonIconUrl: "/static/images/chat-button-icon.svg",
+      browserStorage: "sessionStorage",
+      fixedHeader: false,
+      displayStyle: "button",
+      customColors: {
+        brandColor: "0077B3",
+        conversationColor: "0077B3",
+        actionColor: "0077B3"
+      },
+      containerId: "chat-container"
+    },
+    clearMessagesTimeout: 20
+  });
+</script>
