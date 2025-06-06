@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Test</title>
+
+    <script src="https://cdn.prod.us.five9.net/static/stable/chat/wrapper/index.js"></script>
+
+    <link  rel="stylesheet"  type="text/css" href="https://cdn.prod.us.five9.net/static/stable/chat/proactive/css/proactive.css">
+    <script src="https://cdn.prod.us.five9.net/static/stable/chat/proactive/index.min.js"></script>
+
+</head>
+<body>
+    <h1>Main Header</h1>
+
+    <script>
+        F9.Chat.Wrapper.init({
+          cdn: 'prod',
+          useBusinessHours: true,
+          languages: {"enabled":false,"backgroundColor":"#002C77"},
+          l10n: {"en":{"messenger":{"customText":{"welcomeHeader":"Welcome to your semi Live Chat.","welcomeDescription":"Hey it's me, please type your question in the space below."}},"systemMessages":{"transferredToParticipant":"The chat has been transferred to {name}.","transferredToGroup":"That chat has been transferred to group {group}."}}},
+          prepopulatedFields: [{"k":"campaign","v":"Beta Chat"},{"k":"name","v":"hidden_name"},{"k":"email","v":"hidden@email.com"},{"k":"Question","v":"hidden_question"}],
+          messenger: {"integrationId":"6953dca1-f22e-4188-9a3a-0573455bd427","soundNotificationEnabled":true,"transcriptPrintingEnabled":false,"menuItems":{"imageUpload":false,"fileUpload":false,"shareLocation":false},"embedded":false,"businessName":"Marsh Programs Toronto","businessIconUrl":"https://www.marshmclennan.com/content/dam/mmc-web/site-design/mmc-logo-v3-transparent-background-blue-letters.svg","browserStorage":"sessionStorage","fixedHeader":false,"displayStyle":"button","customColors":{"brandColor":"002C77","conversationColor":"0099ff","actionColor":"0099ff"}},
+          clearMessagesTimeout: 5
+        });
+        </script>
+    
+    <script>
+        const Config = {
+         tenant: 'CS OMNI BETA',
+         profiles: ['Beta Chat'],
+         restAPI: 'https://app.five9.com',
+         };
+            
+         const options = {
+         tenant: Config.tenant,
+         restAPI: Config.restAPI,
+         notificationType: 'notification',
+         };
+         F9.Chat.Proactive.init(options);
+         F9.Chat.Proactive.start({
+         pageId: "demoPage",
+         profiles: Config.profiles[0],
+         fields: ["page1-f1", "page1-f2", "page1-f3"],
+         });
+            
+          </script>
+</body>
+</html>
+
