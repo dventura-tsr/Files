@@ -57,18 +57,21 @@ containerId,
   document.addEventListener("DOMContentLoaded", function () {
     chat = F9.Chat.Wrapper.init({
       cdn: 'alpha-us',
-      useBusinessHours: false,
-      messenger: {
-        integrationId: "6227e8d6b2944300f32d37a9",
-        displayStyle: "button"
-      }
     });
+
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("openChat") === "true") {
+      setTimeout(() => {
+        chat.open();
+      }, 1000);
+    }
   });
 </script>
   
 <h1><a href="#" onclick="chat.open(); return false;">Start Chat</a></h1>  
 </body>
 </html>
+
 
 
 
