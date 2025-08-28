@@ -53,12 +53,10 @@ containerId,
   </script>
 <script>
   let chat;
-
   document.addEventListener("DOMContentLoaded", function () {
     chat = F9.Chat.Wrapper.init({
       cdn: 'alpha-us',
     });
-
     const params = new URLSearchParams(window.location.search);
     if (params.get("openChat") === "true") {
       setTimeout(() => {
@@ -71,6 +69,7 @@ containerId,
 <h1><a href="#" onclick="chat.open(); return false;">Start Chat</a></h1>  
 </body>
 </html>
+
 
 
 
