@@ -28,21 +28,136 @@ messenger: {"integrationId":"6227e8d6b2944300f32d37a9","soundNotificationEnabled
   </script>
 
 
-  <script>
-  window.addEventListener("beforeunload", function () {
-    // Find the "End Chat" button by its aria-label
-    const endChatBtn = document.querySelector('button[aria-label="End Chat"]');
-    if (endChatBtn) {
-      endChatBtn.click(); // Trigger the button click
+<script>
+/**
+ * Robust "end chat on tab close" helper
+ * - Tries to click the End Chat button (best-effort)
+ * - Sends a small reliable request using navigator.sendBeacon or fetch(..., { keepalive: true })
+ * - Works on pagehide, visibilitychange and beforeunload (preference: pagehide/sendBeacon)
+ */
+
+(function () {
+  const ENDPOINT = '/api/endChat'; // <-- change to your server endpoint
+  const SELECTOR = 'button[aria-label="End Chat"]'; // <-- change selector if needed
+  let alreadySent = false;
+  const getSessionInfo = () => ({
+    sessionId: window.chatSessionId || null,
+    ts: new Date().toISOString(),
+    reason: 'tab_closed'
+  });
+
+  function doProgrammaticClick() {
+    try {
+      const btn = document.querySelector(SELECTOR);
+      if (!btn) {
+        console.info('endChat: button not found with selector', SELECTOR);
+        return false;
+      }
+      // Some frameworks block non-user events by checking event.isTrusted.
+      // A programmatic click is isTrusted === false; still try it as a best-effort.
+      btn.click();
+      console.info('endChat: clicked End Chat button');
+      return true;
+    } catch (err) {
+      console.warn('endChat: click failed', err);
+      return false;
+    }
+  }
+
+  function sendBeaconFallback(payload) {
+    try {
+      if (navigator.sendBeacon) {
+        const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
+        const ok = navigator.sendBeacon(ENDPOINT, blob);
+        console.info('endChat: sendBeacon sent?', ok);
+        return ok;
+      }
+    } catch (e) {
+      console.warn('endChat: sendBeacon error', e);
+    }
+    return false;
+  }
+
+  function fetchKeepalive(payload) {
+    try {
+      // keepalive works only for small payloads and is the next best option
+      fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        keepalive: true
+      }).then(() => console.info('endChat: fetch keepalive resolved'))
+        .catch(e => console.warn('endChat: fetch keepalive failed', e));
+      return true;
+    } catch (e) {
+      console.warn('endChat: fetch keepalive exception', e);
+      return false;
+    }
+  }
+
+  function endChatAction() {
+    if (alreadySent) return;
+    alreadySent = true;
+
+    const payload = getSessionInfo();
+
+    // 1) Try programmatic click (UI-level). This may fail or be ignored during unload.
+    doProgrammaticClick();
+
+    // 2) Try sendBeacon (most reliable during unload/pagehide)
+    if (sendBeaconFallback(payload)) return;
+
+    // 3) Fallback to fetch with keepalive (best-effort)
+    if (fetchKeepalive(payload)) return;
+
+    // 4) As last resort, try a synchronous XHR (deprecated/blocked in many browsers).
+    try {
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', ENDPOINT, false); // synchronous
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.send(JSON.stringify(payload));
+      console.info('endChat: sync XHR sent (last-resort)');
+    } catch (e) {
+      console.warn('endChat: sync XHR failed (likely blocked)', e);
+    }
+  }
+
+  // Attach multiple events for broader browser support:
+  window.addEventListener('pagehide', endChatAction); // preferred for unload-like events
+  window.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'hidden') {
+      endChatAction();
     }
   });
+  // beforeunload can be useful, but asynchronous work is often cancelled; still attach it.
+  window.addEventListener('beforeunload', endChatAction);
+
+  // Optional: if you have a WebSocket used for chat, try to close cleanly:
+  window.addEventListener('pagehide', function () {
+    try {
+      if (window.chatWebSocket && window.chatWebSocket.readyState === WebSocket.OPEN) {
+        // send end intent if your server understands it
+        window.chatWebSocket.send(JSON.stringify({ type: 'endChat', ...(getSessionInfo()) }));
+        window.chatWebSocket.close(1000, 'tab closed');
+      }
+    } catch (e) {
+      console.warn('endChat: ws close failed', e);
+    }
+  });
+
+  // Expose helper for manual testing:
+  window._endChatAction = endChatAction;
+
+})();
 </script>
+
 
   
 
   
 </body>
 </html>
+
 
 
 
