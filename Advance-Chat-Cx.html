@@ -26,9 +26,34 @@ messenger: {"integrationId":"6227e8d6b2944300f32d37a9","soundNotificationEnabled
     clearMessagesTimeout: 3
   });
   </script>
+<script>
+  let chat;
+  document.addEventListener("DOMContentLoaded", function () {
+    chat = F9.Chat.Wrapper.init({
+      cdn: 'alpha-us',
+      onClose: function () {
+        console.log("Chat window was closed!");
+        //  Trigger your custom script here
+      },
+      onEndChat: function () {
+        console.log("Chat was ended by user or agent!");
+        //  Trigger your custom script here
+      }
+    });
 
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("openChat") === "true") {
+      setTimeout(() => {
+        chat.open();
+      }, 1000);
+    }
+  });
+</script>
+
+  
 </body>
 </html>
+
 
 
 
