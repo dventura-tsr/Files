@@ -67,8 +67,41 @@ containerId,
 </script>
   
 <h1><a href="#" onclick="chat.open(); return false;">Start Chat</a></h1>  
+
+<script>
+  let chat;
+  document.addEventListener("DOMContentLoaded", function () {
+    chat = F9.Chat.Wrapper.init({
+      cdn: 'alpha-us',
+      onClose: function () {
+        console.log("Chat window was closed!");
+        // 👉 Trigger your custom script here
+      },
+      onEndChat: function () {
+        console.log("Chat was ended by user or agent!");
+        // 👉 Trigger your custom script here
+      }
+    });
+
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("openChat") === "true") {
+      setTimeout(() => {
+        chat.open();
+      }, 1000);
+    }
+  });
+</script>
+
+  document.addEventListener("click", function (e) {
+  if (e.target.matches('button[aria-label="End Chat"]')) {
+    console.log("End Chat button clicked!");
+    // 👉 Trigger your script here
+  }
+});
+
 </body>
 </html>
+
 
 
 
