@@ -33,24 +33,8 @@
     clearMessagesTimeout: 3
   });
   </script>
-  <script>
-    const config = {
-...chatConfig,
-prepopulatedFields,
-messenger: {
-...messenger,
-soundNotificationEnabled: true,
-buttonIconUrl: "/static/images/chat-button-icon.svg",
-customColors: {
-brandColor: BLUE_HEX_CHAT_COLOR,
-conversationColor: BLUE_HEX_CHAT_COLOR,
-actionColor: BLUE_HEX_CHAT_COLOR,
-},
-embedded,
-containerId,
-},
-};
-  </script>
+
+  
 <script>
   let chat;
   document.addEventListener("DOMContentLoaded", function () {
@@ -101,6 +85,7 @@ containerId,
 
 </body>
 </html>
+
 
 
 
