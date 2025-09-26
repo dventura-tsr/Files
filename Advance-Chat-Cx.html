@@ -152,11 +152,35 @@ messenger: {"integrationId":"6227e8d6b2944300f32d37a9","soundNotificationEnabled
 </script>
 
 
+
+
+
+  <form id="contactForm">
+  <!-- your form fields here -->
+
+  <button type="submit">Start Chat</button>
+</form>
+
+<!-- your real Begin Chat button -->
+<button type="submit" data-testid="submitButton" aria-label="Begin Chat" 
+  button-name="Begin Chat" customcolor="#4B5DFF" 
+  class="btn sc-iBYQkv SGtFP btn btn-sm btn-primary btn-outline rounded-2xl text-size2 font-weight5 py-1 px-2 min-w-[90px]">
+  Begin Chat
+</button>
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent actual form submission
+    document.querySelector('button[aria-label="Begin Chat"]').click();
+  });
+</script>
+
   
 
   
 </body>
 </html>
+
 
 
 
