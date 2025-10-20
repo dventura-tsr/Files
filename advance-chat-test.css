@@ -13,6 +13,12 @@
 .root .pn-msg-input__wrapper.pn-msg-input__wrapper {
 border-radius: 6px;}
 
+.jJUdd {
+    background-color: #ffffff;
+    width: 58px;
+    height: 58px;
+}
+
 .link-hover {
     text-decoration-line: none !important;
 }
@@ -48,5 +54,6 @@ border-radius: 6px;}
 .root {
 --lm-digital-web-messenger-chat-default-font-size: 18px;
 }
+
 
 
