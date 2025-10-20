@@ -14,7 +14,7 @@
 border-radius: 6px;}
 
 .jJUdd {
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     width: 58px;
     height: 58px;
 }
@@ -54,6 +54,7 @@ border-radius: 6px;}
 .root {
 --lm-digital-web-messenger-chat-default-font-size: 18px;
 }
+
 
 
 
