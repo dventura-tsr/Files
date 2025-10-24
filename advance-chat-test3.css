@@ -6,21 +6,22 @@
 }
 
 .root .p-2 {
-  padding: 0;
+  padding: 0 !important;
 }
 .root .bg-white {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 .root .max-h-\[43vh\] {
-  max-height: 0vh;
+  max-height: 0vh !important;
 }
 
 
 .root .w-\[30\%\] {
   width: 10%;
-  color: transparent;
+  color: transparent !important;
 }
+
 
 
 
