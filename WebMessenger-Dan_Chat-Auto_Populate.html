@@ -14,9 +14,9 @@
 <body>
 <script>
 
-const nameVar = "Steve Vfive";
-const emailVar = "SteveM@sentosa1.com";
-const questionVar = "Launch Date Inquiry";
+session.nameVar = "Steve Vfive";
+session.emailVar = "SteveM@sentosa1.com";
+session.questionVar = "Launch Date Inquiry";
 
 
 F9.Chat.Wrapper.init({
@@ -44,9 +44,9 @@ F9.Chat.Wrapper.init({
   },
   prepopulatedFields: [
     { "k": "campaign", "v": "Dan_Chat" },
-    { "k": "name", "v": nameVar },
-    { "k": "email", "v": emailVar },
-    { "k": "Question", "v": questionVar }
+    { "k": "name", "v": session?.nameVar ||"Blank Name"},
+    { "k": "email", "v": session?.emailVar ||"noemail@mail.com" },
+    { "k": "Question", "v": session.questionVar }
   ],
   messenger: {
     "integrationId": "6227e8d6b2944300f32d37a9",
@@ -76,6 +76,7 @@ F9.Chat.Wrapper.init({
 </script>
 </body>
 </html>
+
 
 
 
