@@ -26,18 +26,19 @@ session.questionVar = "Launch Date Inquiry?";
   F9.Chat.Wrapper.init({
     cdn: 'prod',
     integrationId: '6953dca1-f22e-4188-9a3a-0573455bd427',
-    chatDeploymentId : '578d22ce-70fd-4ea6-9ad1-e917c6e4ccd9'
+    chatDeploymentId : '578d22ce-70fd-4ea6-9ad1-e917c6e4ccd9',
 
-	    prepopulatedFields: [
-    { "key": "campaign", "value": "Dan_Chat" },
-    { "key": "name", "value": session?.nameVar ||"Blank Name"},
-    { "key": "email", "value": session?.emailVar ||"noemail@mail.com" },
-    { "key": "Question", "value": session.questionVar }
-	  ]
+fields":[
+{"fieldType":"prePopulated","key":"name","value":"session.nameVar"},
+{"fieldType":"prePopulated","key":"email","value":"test@test.com"},
+{"fieldType":"prePopulated","key":"Question","value":"session.questionVar"},
+{"fieldType":"populated","key":"campaign","value":"Dan_Chat"}
+	]
 	  
   });
 </script>
 
 </body>
+
 
 
