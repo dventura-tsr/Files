@@ -29,16 +29,17 @@ F9.Chat.Wrapper.init({
 
 
   prepopulatedFields: [
-    { fieldType: "prePopulated", key: "name", value: session.nameVar },
-    { fieldType: "prePopulated", key: "email", value: session.emailVar },
-    { fieldType: "prePopulated", key: "Question", value: session.questionVar },
-    { fieldType: "populated", key: "campaign", value: "Dan_Chat" }
+    { "k": "campaign", "v": "Dan_Chat" },
+    { "k": "name", "v": session.nameVar },
+    { "k": "email", "v": session.emailVar },
+    { "k": "Question", "v": session.questionVar }
   ]
 });
 </script>
 
 
 </body>
+
 
 
 
