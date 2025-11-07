@@ -16,10 +16,25 @@
 <h4> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </h4>
 
 <script>
+
+window.session = window.session || {};
+session.nameVar = "Steve M";
+session.emailVar = "SteveM@sentosa1.com";
+session.questionVar = "Launch Date Inquiry?";
+
+	
   F9.Chat.Wrapper.init({
     cdn: 'prod',
     integrationId: '6953dca1-f22e-4188-9a3a-0573455bd427',
     chatDeploymentId : '578d22ce-70fd-4ea6-9ad1-e917c6e4ccd9'
+
+	    prepopulatedFields: [
+    { "k": "campaign", "v": "Dan_Chat" },
+    { "k": "name", "v": session?.nameVar ||"Blank Name"},
+    { "k": "email", "v": session?.emailVar ||"noemail@mail.com" },
+    { "k": "Question", "v": session.questionVar }
+	  
   });
 </script>
+
 </body>
