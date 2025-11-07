@@ -16,29 +16,30 @@
 <h4> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </h4>
 
 <script>
-
 window.session = window.session || {};
+
 session.nameVar = "Steve M";
 session.emailVar = "SteveM@sentosa1.com";
 session.questionVar = "Launch Date Inquiry?";
 
-	
-  F9.Chat.Wrapper.init({
-    cdn: 'prod',
-    integrationId: '6953dca1-f22e-4188-9a3a-0573455bd427',
-    chatDeploymentId : '578d22ce-70fd-4ea6-9ad1-e917c6e4ccd9',
+F9.Chat.Wrapper.init({
+  cdn: 'prod',
+  integrationId: '6953dca1-f22e-4188-9a3a-0573455bd427',
+  chatDeploymentId: '578d22ce-70fd-4ea6-9ad1-e917c6e4ccd9',
 
-fields":[
-{"fieldType":"prePopulated","key":"name","value":"session.nameVar"},
-{"fieldType":"prePopulated","key":"email","value":"test@test.com"},
-{"fieldType":"prePopulated","key":"Question","value":"session.questionVar"},
-{"fieldType":"populated","key":"campaign","value":"Dan_Chat"}
-	]
-	  
-  });
+
+  prepopulatedFields: [
+    { fieldType: "prePopulated", key: "name", value: session.nameVar },
+    { fieldType: "prePopulated", key: "email", value: session.emailVar },
+    { fieldType: "prePopulated", key: "Question", value: session.questionVar },
+    { fieldType: "populated", key: "campaign", value: "Dan_Chat" }
+  ]
+});
 </script>
 
+
 </body>
+
 
 
 
