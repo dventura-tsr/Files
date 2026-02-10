@@ -1,0 +1,12 @@
+.root .pn-msg-input__wrapper.pn-msginput__wrapper {
+     border-radius: 6px;
+ }
+
+.card.banner {
+    min-height: 50vh !important;
+}
+
+.flex.flex-col.language-selection.rounded-xl.mt-\[-35vh\] {
+    min-height: 65vh !important;
+    overflow: auto !important;
+}
