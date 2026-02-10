@@ -7,6 +7,7 @@
 }
 
 .flex.flex-col.language-selection.rounded-xl.mt-\[-35vh\] {
-    min-height: 65vh !important;
+    min-height: 75vh !important;
     overflow: auto !important;
 }
+
