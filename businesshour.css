@@ -3,7 +3,7 @@
  }
 
 .card.banner {
-    min-height: 50vh !important;
+    min-height: 55vh !important;
 }
 
 
@@ -11,5 +11,6 @@
     min-height: 75vh !important;
     overflow: auto !important;
 }
+
 
 
