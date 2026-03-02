@@ -6,10 +6,11 @@
 </head>
 
 <body>
-<h1> Dan's Page </h1>
+<h1> Dan's Page - CS OMNI BETA </h1>
 <BR>
 <BR>
 <h2> Test Page </h2>
+	<a href="#" id="clickToChat">Click to Chat</a>
 <br>
 <br>
 <br>
@@ -36,9 +37,19 @@ F9.Chat.Wrapper.init({
   ]
 });
 </script>
-
+	
+<script>
+document.getElementById('clickToChat').addEventListener('click', (event) => {
+                if(FIV9){
+                    FIVN.open();
+                } else {
+                    console.log('FIVN not defined');
+                }                
+            });
+</script>
 
 </body>
+
 
 
 
