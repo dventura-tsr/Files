@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<h1> Dan's Page - CS OMNI BETA </h1>
+<h1> Dan's Page - CS OMNI BETA NEW 1 </h1>
 <BR>
 <BR>
 <h2> Test Page </h2>
@@ -40,10 +40,8 @@ F9.Chat.Wrapper.init({
 	
 <script>
 document.getElementById('clickToChat').addEventListener('click', (event) => {
-                if(FIV9){
-                    FIVN.open();
-                } else {
-                    console.log('FIVN not defined');
+	if (FIVN && FIVN.isOpened && !FIVN.isOpened()) {
+		FIVN.open()
                 }                
             });
 </script>
