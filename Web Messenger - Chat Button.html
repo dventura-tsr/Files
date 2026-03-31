@@ -1,0 +1,48 @@
+<html>
+<head>
+	<script 
+		src="https://cdn.prod.us.five9.net/static/stable/chat/wrapper/index.js">
+	</script>
+</head>
+
+<body>
+<h1> CS OMNI BETA Dynamic Webpage Test 2026 </h1>
+<BR>
+<BR>
+<h2> Chat Button Demonstration</h2>
+<br>
+
+<h2> 
+<!--The onclick="start()" attribute tells the browser to execute the JavaScript function named start whenever the button is clicked.
+-->
+<button onclick="start()">Click Button To Chat</button>
+<br>	
+<br>
+<br>	
+<br>
+
+<!-- Below is the Web Messenger Script.
+-->
+<script>
+  F9.Chat.Wrapper.init({
+    cdn: 'prod',
+    integrationId: '6953dca1-f22e-4188-9a3a-0573455bd427',
+    chatDeploymentId : '5cec37b3-5a0e-4e68-93b5-1842ce566560'
+  });
+
+</script>
+	
+<!-- Below is the script that calls start() function. This is the core logic and acts as a safety check. It verifies three things in order: 1. FIVN: Checks if the main Five9 chat object (FIVN) exists on the page. 2. FIVN.isOpened: Checks if the isOpened method is available on that object. 3. !FIVN.isOpened(): Calls the isOpened() method to check if the chat window is currently open, and the ! negates the result. So, this condition is true only if the chat is not currently open. If met, it calls the open() method from the Five9 library to launch the chat window for the user.
+-->
+
+<script>
+function start() {
+if (FIVN && FIVN.isOpened && !FIVN.isOpened()) {
+FIVN.open()
+}
+}
+</script>
+
+	
+</body>
+</html>
