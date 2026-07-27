@@ -1,0 +1,21 @@
+<html>
+<h1> CHAT TEST </h1>
+<head>
+<script>
+let chatWin;
+
+function openChat() {
+  if (!chatWin || chatWin.closed) {
+    chatWin = window.open('https://example.com', '_blank');
+  } else {
+    chatWin.focus();
+  }
+}
+</script>
+</head>
+Welcome to the Chat Test
+<body>
+<button onclick="openChat()">Open Chat</button>
+</body>
+
+</html>
