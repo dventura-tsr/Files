@@ -16,26 +16,6 @@ function openChat() {
 }
 </script>
 
-<script>
-  // your existing chat widget init code...
-  // e.g. const sessionId = initChatWidget();
-
-  function clearChatCookie() {
-    document.cookie = 'chat_session_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-  }
-
-  function endChatSession() {
-    const sessionId = getChatSessionId(); // however your widget stores it
-    if (sessionId) {
-      const blob = new Blob([JSON.stringify({ sessionId })], { type: 'application/json' });
-      navigator.sendBeacon('/api/chat/end-session', blob);
-      clearChatCookie();
-    }
-  }
-
-  window.addEventListener('pagehide', endChatSession);
-</script>
-	
 </head>
 Welcome to the Chat Test
 <body>
