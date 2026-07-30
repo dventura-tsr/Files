@@ -15,6 +15,27 @@ function openChat() {
   }
 }
 </script>
+
+<script>
+  // your existing chat widget init code...
+  // e.g. const sessionId = initChatWidget();
+
+  function clearChatCookie() {
+    document.cookie = 'chat_session_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+  }
+
+  function endChatSession() {
+    const sessionId = getChatSessionId(); // however your widget stores it
+    if (sessionId) {
+      const blob = new Blob([JSON.stringify({ sessionId })], { type: 'application/json' });
+      navigator.sendBeacon('/api/chat/end-session', blob);
+      clearChatCookie();
+    }
+  }
+
+  window.addEventListener('pagehide', endChatSession);
+</script>
+	
 </head>
 Welcome to the Chat Test
 <body>
@@ -64,28 +85,7 @@ Five9SocialWidget.addWidget(options);
   
 <h2><button onclick="openChat()">Open Chat</button></h2>
 
-Yes — this all goes inside a <script> tag (or your existing .js file), typically wherever you're already initializing the chat widget. For example:
 
-html
-<script>
-  // your existing chat widget init code...
-  // e.g. const sessionId = initChatWidget();
-
-  function clearChatCookie() {
-    document.cookie = 'chat_session_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-  }
-
-  function endChatSession() {
-    const sessionId = getChatSessionId(); // however your widget stores it
-    if (sessionId) {
-      const blob = new Blob([JSON.stringify({ sessionId })], { type: 'application/json' });
-      navigator.sendBeacon('/api/chat/end-session', blob);
-      clearChatCookie();
-    }
-  }
-
-  window.addEventListener('pagehide', endChatSession);
-</script>
 	
 </body>
 
